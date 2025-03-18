@@ -13,7 +13,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
   scrollbar-width: thin;
-  scrollbar-color: #10f3ffc0 transparent;
+  scrollbar-color: colors.$extra-dark-color transparent;
   -webkit-tap-highlight-color: transparent !important;
 }
 
@@ -40,5 +40,39 @@ body {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+  }
+}
+
+.padding-box {
+  padding: 0px 64px;
+}
+
+.ant-select-dropdown {
+  width: auto !important;
+}
+
+.main-btn {
+  border: none;
+  border-radius: 16px;
+  min-height: 54px;
+  padding: 15px 37px;
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &.primary-btn {
+    background-color: #4a63ab;
+    transition: 0.4s ease;
+
+    &:hover {
+      background-color: #4a62abd2 !important;
+    }
+
+    * {
+      color: #fff;
+    }
   }
 }

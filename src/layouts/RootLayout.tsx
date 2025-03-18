@@ -8,7 +8,9 @@ const RootLayout = () => {
     return (
         <Flex className="root-layout" vertical>
             <Header className="root-header" />
-            <Outlet />
+            <Flex vertical className="root-main">
+                <Outlet />
+            </Flex>
             <Footer className="root-footer" />
         </Flex>
     )

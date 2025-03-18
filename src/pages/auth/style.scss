@@ -1,0 +1,103 @@
+.login {
+  background-color: #fafafa;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  &__main {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+
+    .login-card {
+      background-color: #fff;
+      border-radius: 8px;
+
+      .register-page {
+        input {
+          padding: 15px 11px;
+        }
+      }
+
+      .ant-form-item {
+        .input-mask {
+          padding: 15px 11px;
+        }
+      }
+    }
+
+    // padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 40px;
+      color: #19161d;
+      margin-bottom: 24px;
+    }
+    &--info {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #6b7280;
+      margin-bottom: 24px;
+
+      b {
+        color: #19161d;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__footer {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #00000073;
+  }
+
+  &__pathchanger {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #19161d;
+    text-decoration: underline;
+  }
+}
+
+.ant-drawer {
+  .option-list-item {
+    cursor: pointer;
+
+    &:hover {
+      span {
+        text-decoration: underline;
+        color: #1677ff;
+      }
+
+      .ant-icon {
+        color: #1677ff;
+      }
+    }
+  }
+}
+.ant-segmented-item {
+  border-radius: 8px !important;
+}
+.nothover {
+  &:hover {
+    color: white !important;
+    background: #19161d !important;
+  }
+}

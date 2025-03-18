@@ -1,0 +1,43 @@
+.get-sms-page {
+  .sms-input {
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    padding: 6px 12px;
+
+    & input {
+      padding: 0;
+      border: 0;
+      font-weight: 400;
+      font-size: 13pt;
+
+      &:focus {
+        outline: none;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .resend-sms-btn {
+    padding: 0;
+
+    span {
+      margin-right: auto;
+      text-decoration: underline;
+      color: #19161d;
+      font-weight: 600;
+    }
+  }
+}
+
+.set-password-page {
+  .ant-input-password {
+    border: 1px solid #ebebeb;
+    padding: 6px 12px;
+    border-radius: 8px;
+
+    input {
+      font-size: 16px;
+    }
+  }
+}

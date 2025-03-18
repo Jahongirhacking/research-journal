@@ -4,6 +4,77 @@
   flex: 1;
 
   .root-header {
+    .header-top {
+      background-color: colors.$primary-color;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      * {
+        color: #fff;
+      }
+
+      .ant-select {
+        .ant-select-selector {
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+
+    .header-bottom {
+      background-color: colors.$secondary-color;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      overflow-x: auto;
+
+      .ant-image {
+        min-width: 200px;
+      }
+
+      .links {
+        span {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+          color: #4a63ab;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        a {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 20px;
+            background-color: #4a63ab;
+            opacity: 0;
+            transition: 0.4s ease;
+          }
+
+          &.active::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .root-main {
+    flex: 1;
+  }
+
+  .root-footer {
     background-color: colors.$primary-color;
+
+    * {
+      color: #fff !important;
+    }
   }
 }

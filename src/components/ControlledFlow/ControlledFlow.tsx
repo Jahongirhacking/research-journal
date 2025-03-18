@@ -1,17 +1,12 @@
 import React, { Dispatch, FC, ReactElement, SetStateAction } from 'react';
-import ControlledFlowContext from './ControlledFlowContext';
+import ControlledFlowContext, { IControlledFlowContext } from './ControlledFlowContext';
 
-interface IControlledFlowProps {
+export interface IControlledFlowProps {
     data: object;
     setData: Dispatch<SetStateAction<object>>;
     current: number;
     setCurrent: Dispatch<SetStateAction<number>>;
     children: ReactElement[] | ReactElement;
-}
-
-export interface IControlledFlowContext extends Omit<IControlledFlowProps, "children" | "setData"> {
-    setNextIndex: (step: number) => void;
-    pushData: (data: object) => void;
 }
 
 const ControlledFlow: FC<IControlledFlowProps> = ({ data, setData, current, setCurrent, children }) => {
