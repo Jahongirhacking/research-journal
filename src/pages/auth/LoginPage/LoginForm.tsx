@@ -1,12 +1,9 @@
-import InputMask from '@/components/Form/InputMask';
-import { paths } from '@/router/paths';
-import { getLocalStorage, localStorageNames, setLocalStorage } from '@/utils/storageUtils';
 import { Button, Divider, Flex, Form, Input, Segmented } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+import InputMask from '../../../components/Form/InputMask';
 
-export const LoginForm = ({ handleSubmit }) => {
+export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<boolean> }) => {
     const navigate = useNavigate();
     // const dispatch = useDispatch();
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -21,13 +18,14 @@ export const LoginForm = ({ handleSubmit }) => {
         });
     }, [phoneNumber, password]);
 
-    const handleLogin = () => {
-        let deviceId = getLocalStorage(localStorageNames.deviceId);
-        if (!deviceId) {
-            deviceId = uuidv4();
-            setLocalStorage(localStorageNames.deviceId, deviceId);
-        }
-        handleSubmit({ deviceId, phoneNumber: phoneNumber.split('').filter((el) => !isNaN(Number.parseInt(el))).join(''), password });
+    const handleLogin = async () => {
+        await handleSubmit({});
+        // let deviceId = getLocalStorage(localStorageNames.deviceId);
+        // if (!deviceId) {
+        //     deviceId = uuidv4();
+        //     setLocalStorage(localStorageNames.deviceId, deviceId);
+        // }
+        // handleSubmit({ deviceId, phoneNumber: phoneNumber.split('').filter((el) => !isNaN(Number.parseInt(el))).join(''), password });
     };
 
     const handleOneIdLogin = () => {
@@ -38,10 +36,10 @@ export const LoginForm = ({ handleSubmit }) => {
         <div style={{ width: '100%' }} className="login-page pd-box">
             <h2 className="login__main--title">Kirish yoki ro‘yxatdan o‘tish</h2>
             <Segmented
-                defaultValue={paths.login}
+                defaultValue={"/auth/login"}
                 options={[
-                    { label: `Tizimga kirish`, value: paths.login },
-                    { label: `Ro‘yxatdan o‘tish`, value: paths.register },
+                    { label: `Tizimga kirish`, value: "/auth/login" },
+                    { label: `Ro‘yxatdan o‘tish`, value: "/auth/register" },
                 ]}
                 block
                 style={{ marginBottom: 16 }}
@@ -77,7 +75,7 @@ export const LoginForm = ({ handleSubmit }) => {
                 </Form.Item>
 
                 <Flex justify="flex-end">
-                    <Link to={paths.resetPassword} className="login__pathchanger">
+                    <Link to={"/auth/reset-password"} className="login__pathchanger">
                         Parolni unutdingizmi ?
                     </Link>
                 </Flex>

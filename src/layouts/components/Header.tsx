@@ -36,7 +36,9 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                         ))
                     }
                 </Flex>
-                <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
+                <Link to={"/auth/login"}>
+                    <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
+                </Link>
             </Flex>
         </Flex>
     )
