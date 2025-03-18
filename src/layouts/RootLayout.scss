@@ -1,0 +1,9 @@
+@use "../colors";
+
+.root-layout {
+  flex: 1;
+
+  .root-header {
+    background-color: colors.$primary-color;
+  }
+}
