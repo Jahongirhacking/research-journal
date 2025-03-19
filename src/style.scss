@@ -80,3 +80,20 @@ body {
     }
   }
 }
+
+.main-title {
+  width: 100%;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: colors.$primary-color;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 60px;
+}

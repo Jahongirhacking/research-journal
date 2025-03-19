@@ -5,7 +5,6 @@ import ControlledFlow from '../../../components/ControlledFlow/ControlledFlow';
 import GetPhone from './GetPhone';
 import GetSMS from './GetSMS';
 import SetPassword from './SetPassword';
-import './style.scss';
 
 export const RegisterPage = () => {
   const [index, setIndex] = useState(0);

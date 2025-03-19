@@ -44,7 +44,7 @@ const Footer: FC<Omit<FlexProps, 'children'>> = (props) => {
             </Flex>
             <Flex gap={80} justify="space-between" align="center" style={{ width: '100%' }} wrap>
                 <Typography.Text>Copyright © 2025  <a href="https://www.tiu.uz/" target="_blank">tiu.uz</a> | Barcha huquqlar himoyalangan</Typography.Text>
-                <Flex gap={20} align="center" className="social-links">
+                <Flex gap={20} align="center" className="social-links" wrap>
                     <Button href="#" target="_blank" icon={<FacebookIcon />} shape="circle" />
                     <Button href="#" target="_blank" icon={<LinkedInIcon />} shape="circle" />
                     <Button href="#" target="_blank" icon={<InstagramIcon />} shape="circle" />

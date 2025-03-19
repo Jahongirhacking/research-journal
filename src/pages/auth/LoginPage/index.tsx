@@ -3,6 +3,7 @@ import console from "console";
 import { useState } from "react";
 import ControlledFlow from "../../../components/ControlledFlow/ControlledFlow";
 import GetSMS from "../RegisterPage/GetSMS";
+import "../style.scss";
 import { LoginForm } from "./LoginForm";
 
 const LoginPage = () => {

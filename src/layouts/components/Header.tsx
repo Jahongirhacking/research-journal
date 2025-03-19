@@ -1,3 +1,4 @@
+import { MenuOutlined } from "@ant-design/icons"
 import { Button, Flex, FlexProps, Image, Select, Typography } from "antd"
 import { FC } from "react"
 import { Link, NavLink } from "react-router-dom"
@@ -36,9 +37,12 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                         ))
                     }
                 </Flex>
-                <Link to={"/auth/login"}>
-                    <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
-                </Link>
+                <Flex gap={24} align="center">
+                    <Link to={"/auth/login"}>
+                        <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
+                    </Link>
+                    <Button className="menu-btn" icon={<MenuOutlined />} />
+                </Flex>
             </Flex>
         </Flex>
     )

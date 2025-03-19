@@ -43,6 +43,26 @@
       padding-bottom: 15px;
       overflow-x: auto;
 
+      @media screen and (max-width: 1200px) {
+        .links {
+          display: none;
+        }
+
+        .menu-btn {
+          display: block !important;
+          background-color: colors.$primary-color;
+          color: #fff;
+          font-size: 17pt;
+          padding: 8px 12px;
+          height: auto;
+          width: auto;
+        }
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
       .ant-image {
         min-width: 120px;
       }
@@ -93,6 +113,7 @@
     background-color: colors.$primary-color;
     padding-top: 82px;
     padding-bottom: 34px;
+    margin-top: 60px;
 
     * {
       color: #fff !important;
@@ -119,7 +140,8 @@
         align-items: center;
         justify-content: center;
         width: 60px;
-        height: 60px;
+        height: auto;
+        aspect-ratio: 1 / 1;
       }
     }
   }

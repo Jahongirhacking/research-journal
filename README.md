@@ -1,4 +1,4 @@
-# muhandis.edu.uz
+# Research Jurnal
 
 muhandis.edu.uz - respublika miqyosidagi muhandislar tanlovi uchun ariza yuborish sayti
 
