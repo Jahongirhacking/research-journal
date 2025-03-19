@@ -45,6 +45,10 @@ body {
 
 .padding-box {
   padding: 0px 64px;
+
+  @media screen and (max-width: 720px) {
+    padding: 0px 24px;
+  }
 }
 
 .ant-select-dropdown {

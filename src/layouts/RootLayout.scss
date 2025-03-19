@@ -13,6 +13,22 @@
         color: #fff;
       }
 
+      .header-control {
+        .ant-btn {
+          @media screen and (max-width: 450px) {
+            display: none;
+          }
+        }
+      }
+
+      span {
+        white-space: nowrap;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+      }
+
       .ant-select {
         .ant-select-selector {
           background-color: transparent;
@@ -28,10 +44,13 @@
       overflow-x: auto;
 
       .ant-image {
-        min-width: 200px;
+        min-width: 120px;
       }
 
       .links {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px;
         span {
           font-weight: 500;
           font-size: 16px;

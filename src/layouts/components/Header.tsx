@@ -17,7 +17,7 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
         <Flex vertical {...props}>
             <Flex justify="space-between" className="header-top padding-box">
                 <Button type="link" icon={<TiuIcon />} href="https://www.tiu.uz/" target="_blank">tiu.uz</Button>
-                <Flex gap={32} align="center">
+                <Flex gap={32} align="center" style={{ minWidth: 0 }} className="header-control">
                     <Typography.Text>ISSN: 6729-0988</Typography.Text>
                     <Button type="link" icon={<PhoneIcon />} href="tel:+998977777777" target="_blank">+998977777777</Button>
                     <Select />
@@ -27,7 +27,7 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                 <Link to={'/'}>
                     <Image src="/images/logo.svg" preview={false} />
                 </Link>
-                <Flex gap={40} className="links">
+                <Flex gap={40} className="links" style={{ minWidth: 0 }}>
                     {
                         navbar.map(el => (
                             <NavLink to={el?.href} key={el?.href || 'index'}>
