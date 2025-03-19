@@ -1,0 +1,27 @@
+@use "../../colors";
+
+.journal-card {
+  border-radius: 16px;
+
+  .ant-card-body {
+    padding: 15px 22px;
+
+    * {
+      color: colors.$medium-text-color;
+    }
+
+    .journal-btns {
+      .ant-btn {
+        border-radius: 12px;
+      }
+
+      .detail-btn {
+        background-color: colors.$primary-color;
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

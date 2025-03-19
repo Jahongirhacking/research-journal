@@ -96,3 +96,98 @@ export const AuthIcon = () => (
     </g>
   </svg>
 )
+
+export const Question1Icon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M60 49.4799V25.3399C60 22.9399 58.04 21.1599 55.66 21.3599H55.54C51.34 21.7199 44.96 23.8599 41.4 26.0999L41.06 26.3199C40.48 26.6799 39.52 26.6799 38.94 26.3199L38.44 26.0199C34.88 23.7999 28.52 21.6799 24.32 21.3399C21.94 21.1399 20 22.9399 20 25.3199V49.4799C20 51.3999 21.56 53.1999 23.48 53.4399L24.06 53.5199C28.4 54.0999 35.1 56.2999 38.94 58.3999L39.02 58.4399C39.56 58.7399 40.42 58.7399 40.94 58.4399C44.78 56.3199 51.5 54.0999 55.86 53.5199L56.52 53.4399C58.44 53.1999 60 51.3999 60 49.4799Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M40 26.98V56.98" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M31.5 32.98H27" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M33 38.98H27" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const Question2Icon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M34 50V38L30 42" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M34 38L38 42" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M60 36V46C60 56 56 60 46 60H34C24 60 20 56 20 46V34C20 24 24 20 34 20H44" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M60 36H52C46 36 44 34 44 28V20L60 36Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const Question3Icon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M22.9999 56.9999C24.6599 58.6599 27.3399 58.6599 28.9999 56.9999L54.9999 30.9999C56.6599 29.3399 56.6599 26.6599 54.9999 24.9999C53.3399 23.3399 50.6599 23.3399 48.9999 24.9999L22.9999 50.9999C21.3399 52.6599 21.3399 55.3399 22.9999 56.9999Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M52.02 33.98L46.02 27.98" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M33 20.88L36 20L35.12 23L36 26L33 25.12L30 26L30.88 23L30 20L33 20.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M25 32.88L28 32L27.12 35L28 38L25 37.12L22 38L22.88 35L22 32L25 32.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M55 42.88L58 42L57.12 45L58 48L55 47.12L52 48L52.88 45L52 42L55 42.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const AuthorsIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.16006 10.87C9.06006 10.86 8.94006 10.86 8.83006 10.87C6.45006 10.79 4.56006 8.84 4.56006 6.44C4.56006 3.99 6.54006 2 9.00006 2C11.4501 2 13.4401 3.99 13.4401 6.44C13.4301 8.84 11.5401 10.79 9.16006 10.87Z" stroke="#181717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16.41 4C18.35 4 19.91 5.57 19.91 7.5C19.91 9.39 18.41 10.93 16.54 11C16.46 10.99 16.37 10.99 16.28 11" stroke="#181717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M4.15997 14.56C1.73997 16.18 1.73997 18.82 4.15997 20.43C6.90997 22.27 11.42 22.27 14.17 20.43C16.59 18.81 16.59 16.17 14.17 14.56C11.43 12.73 6.91997 12.73 4.15997 14.56Z" stroke="#181717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M18.3401 20C19.0601 19.85 19.7401 19.56 20.3001 19.13C21.8601 17.96 21.8601 16.03 20.3001 14.86C19.7501 14.44 19.0801 14.16 18.3701 14" stroke="#181717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const PopularArticlesIcon = () => (
+  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21 7.5V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V7.5C3 4.5 4.5 2.5 8 2.5H16C19.5 2.5 21 4.5 21 7.5Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15.5 2.5V10.36C15.5 10.8 14.98 11.02 14.66 10.73L12.34 8.59003C12.15 8.41003 11.85 8.41003 11.66 8.59003L9.34003 10.73C9.02003 11.02 8.5 10.8 8.5 10.36V2.5H15.5Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13.25 14.5H17.5" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M9 18.5H17.5" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const LastJournalIcon = () => (
+  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22 17.2402V5.17019C22 3.97019 21.02 3.08019 19.83 3.18019H19.77C17.67 3.36019 14.48 4.43019 12.7 5.55019L12.53 5.66019C12.24 5.84019 11.76 5.84019 11.47 5.66019L11.22 5.51019C9.44 4.40019 6.26 3.34019 4.16 3.17019C2.97 3.07019 2 3.97019 2 5.16019V17.2402C2 18.2002 2.78 19.1002 3.74 19.2202L4.03 19.2602C6.2 19.5502 9.55 20.6502 11.47 21.7002L11.51 21.7202C11.78 21.8702 12.21 21.8702 12.47 21.7202C14.39 20.6602 17.75 19.5502 19.93 19.2602L20.26 19.2202C21.22 19.1002 22 18.2002 22 17.2402Z" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12 5.99023V20.9902" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M7.75 8.99023H5.5" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.5 11.9902H5.5" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const CalendarIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 4.5V6.75" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15 4.5V6.75" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M5.625 9.81738H18.375" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M18.75 9.375V15.75C18.75 18 17.625 19.5 15 19.5H9C6.375 19.5 5.25 18 5.25 15.75V9.375C5.25 7.125 6.375 5.625 9 5.625H15C17.625 5.625 18.75 7.125 18.75 9.375Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14.771 13.2751H14.7778" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14.771 15.5251H14.7778" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M11.9966 13.2751H12.0033" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M11.9966 15.5251H12.0033" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M9.22073 13.2751H9.22747" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M9.22073 15.5251H9.22747" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const EyeIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5799 11.9999C15.5799 13.9799 13.9799 15.5799 11.9999 15.5799C10.0199 15.5799 8.41992 13.9799 8.41992 11.9999C8.41992 10.0199 10.0199 8.41992 11.9999 8.41992C13.9799 8.41992 15.5799 10.0199 15.5799 11.9999Z" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12.0001 20.27C15.5301 20.27 18.8201 18.19 21.1101 14.59C22.0101 13.18 22.0101 10.81 21.1101 9.39997C18.8201 5.79997 15.5301 3.71997 12.0001 3.71997C8.47009 3.71997 5.18009 5.79997 2.89009 9.39997C1.99009 10.81 1.99009 13.18 2.89009 14.59C5.18009 18.19 8.47009 20.27 12.0001 20.27Z" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const DownloadIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.44 8.8999C20.04 9.2099 21.51 11.0599 21.51 15.1099V15.2399C21.51 19.7099 19.72 21.4999 15.25 21.4999H8.73998C4.26998 21.4999 2.47998 19.7099 2.47998 15.2399V15.1099C2.47998 11.0899 3.92998 9.2399 7.46998 8.9099" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12 2V14.88" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15.3499 12.6499L11.9999 15.9999L8.6499 12.6499" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const RightIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14.4299 5.92993L20.4999 11.9999L14.4299 18.0699" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M3.5 12H20.33" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)

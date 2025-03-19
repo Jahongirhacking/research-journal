@@ -39,7 +39,7 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
 
   return (
     <div style={{ width: '100%' }} className="login-page">
-      <h2 className="main-title"><AuthIcon /> Tizimga kirish</h2>
+      <h2 className="main-title"><AuthIcon /> Ro‘yxatdan o‘tish</h2>
       <Flex vertical className='padding-box'>
         <Flex className='auth-content'>
           <Flex className='image-container'>

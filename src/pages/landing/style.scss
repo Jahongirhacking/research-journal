@@ -1,0 +1,152 @@
+@use "../../colors";
+
+.main-page {
+  .main-page__title {
+    font-weight: 600;
+    font-size: 24px;
+    color: colors.$primary-color;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .hero {
+    background-color: colors.$primary-color;
+    min-height: calc(100dvh - 168px);
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    border-radius: 0 0 40px 40px;
+
+    .hero-content {
+      max-width: min(700px, 100%);
+
+      .ant-btn {
+        width: fit-content;
+        margin-right: auto;
+      }
+
+      .ant-typography {
+        color: #fff;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 36px;
+      }
+
+      strong {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 124%;
+      }
+    }
+  }
+
+  .questions {
+    position: relative;
+    height: 230px;
+    background-color: colors.$secondary-color;
+
+    .question-card-container {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #4a62ab80 transparent;
+      position: absolute;
+      top: -70px;
+      left: 0;
+      padding-bottom: 12px;
+
+      .question-card {
+        min-width: 400px;
+
+        svg {
+          width: auto;
+          min-width: 40px;
+        }
+
+        .ant-typography {
+          flex: 1;
+          min-width: 150px;
+        }
+      }
+    }
+  }
+
+  .popular-articles {
+    padding-top: 64px;
+    padding-bottom: 80px;
+
+    .card-container {
+      justify-content: center;
+
+      .article-card {
+        flex: 1;
+        min-width: min(400px, 100%);
+      }
+    }
+  }
+
+  .last-journals {
+    background-color: colors.$secondary-color;
+    padding-top: 64px;
+    padding-bottom: 73px;
+
+    .card-container {
+      justify-content: center;
+
+      .journal-card {
+        flex: 1;
+        min-width: min(250px, 100%);
+        max-width: 300px;
+      }
+    }
+  }
+
+  .send-article {
+    padding-top: 157px;
+    padding-bottom: 54px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      width: 80%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, 50%);
+      background-image: url("/images/pattern_1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+    }
+
+    .padding-box {
+      text-align: center;
+
+      .ant-typography {
+        color: colors.$medium-text-color;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 69.12px;
+        letter-spacing: -2.02px;
+      }
+
+      span {
+        max-width: 222px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}

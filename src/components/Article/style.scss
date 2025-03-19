@@ -1,0 +1,32 @@
+.article-card {
+  background-color: #e8effa;
+  border-radius: 16px;
+  transition: 0.6s ease;
+  cursor: pointer;
+
+  .ant-card-body {
+    padding: 16px 23px;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 40px 4px #4a63ab80;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .ant-tag {
+    background-color: #4a63ab;
+    width: 100%;
+    max-width: min(166px, 100%);
+    border-radius: 12px 0;
+    border: 1px solid #1b43b6;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+  }
+}
