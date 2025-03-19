@@ -137,7 +137,7 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
                   </Form.Item>
                 </Flex>
 
-                <Flex gap={20} justify='center'>
+                <Flex gap={20} justify='center' align='center' wrap>
                   <Button className="main-btn one-id-btn">
                     ONE ID orqali kirish
                   </Button>
