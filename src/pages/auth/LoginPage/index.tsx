@@ -1,5 +1,4 @@
 import { Flex } from "antd";
-import console from "console";
 import { useState } from "react";
 import ControlledFlow from "../../../components/ControlledFlow/ControlledFlow";
 import GetSMS from "../RegisterPage/GetSMS";
@@ -40,8 +39,6 @@ const LoginPage = () => {
       return false
     }
   }
-
-
 
   return (
     <Flex vertical style={{ width: '100%' }} className="login-page pd-box">
