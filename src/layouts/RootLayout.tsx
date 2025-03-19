@@ -11,7 +11,7 @@ const RootLayout = () => {
             <Flex vertical className="root-main">
                 <Outlet />
             </Flex>
-            <Footer className="root-footer" />
+            <Footer className="root-footer padding-box" />
         </Flex>
     )
 }

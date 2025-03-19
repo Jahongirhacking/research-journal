@@ -72,9 +72,36 @@
 
   .root-footer {
     background-color: colors.$primary-color;
+    padding-top: 82px;
+    padding-bottom: 34px;
 
     * {
       color: #fff !important;
+    }
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+
+    .ant-btn {
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    .footer-nav {
+      column-gap: 160px;
+      row-gap: 80px;
+    }
+
+    .social-links {
+      .ant-btn {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }
