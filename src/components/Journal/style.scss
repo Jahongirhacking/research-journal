@@ -1,4 +1,4 @@
-@use "../../colors";
+@use "../../variables";
 
 .journal-card {
   border-radius: 16px;
@@ -6,17 +6,22 @@
   .ant-card-body {
     padding: 15px 22px;
 
+    .ant-btn {
+      padding: 0;
+    }
+
     * {
-      color: colors.$medium-text-color;
+      color: variables.$medium-text-color;
     }
 
     .journal-btns {
       .ant-btn {
         border-radius: 12px;
+        padding: 0 15px;
       }
 
       .detail-btn {
-        background-color: colors.$primary-color;
+        background-color: variables.$primary-color;
 
         * {
           color: #fff;

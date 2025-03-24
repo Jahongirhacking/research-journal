@@ -9,7 +9,7 @@ const Article = () => {
             <Flex vertical gap={20}>
                 <Typography.Title level={3} style={{ margin: 0 }}>Infokommunikatsiya tarmoqlarda Buyurtmalarni tushish va ularga xizmat ko’rsatish jarayonlarini modellashtirish</Typography.Title>
                 <Tag>Ilmiy maqola</Tag>
-                <Flex align="center" gap={6}>
+                <Flex align="center" gap={6} wrap>
                     <AuthorsIcon />
                     <Typography.Text>Mualliflar:</Typography.Text>
                     <Flex><Link to={'#'}>Shamsiddinov S.Sh, Ahmedov. B.D</Link></Flex>

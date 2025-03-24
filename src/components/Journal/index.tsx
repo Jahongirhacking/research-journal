@@ -10,14 +10,14 @@ const Journal = () => {
                     <Typography.Text>Volume 1 Issue 1</Typography.Text>
                     <Image src="/images/journal_cover.png" preview={false} />
                 </Flex>
-                <Flex vertical gap={8}>
-                    <Flex gap={20} justify="space-between" align="center">
+                <Flex vertical gap={12}>
+                    <Flex gap={3} justify="space-between" align="center" wrap>
                         <Button type="text" icon={<CalendarIcon />}>15.02.2025</Button>
                         <Button type="text" icon={<EyeIcon />}>568</Button>
                     </Flex>
-                    <Flex gap={20} justify="space-between" align="center" className="journal-btns">
-                        <Button icon={<DownloadIcon />} className="download-btn">Yuklash</Button>
-                        <Button icon={<RightIcon />} iconPosition="end" className="detail-btn">Batafsil</Button>
+                    <Flex gap={20} justify="center" align="center" className="journal-btns" wrap>
+                        <Button icon={<DownloadIcon />} className="download-btn" style={{ flex: 1, width: '100%' }}>Yuklash</Button>
+                        <Button icon={<RightIcon />} iconPosition="end" className="detail-btn" style={{ flex: 1, width: '100%' }}>Batafsil</Button>
                     </Flex>
                 </Flex>
             </Flex>

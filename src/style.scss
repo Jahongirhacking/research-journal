@@ -1,4 +1,4 @@
-@use "colors";
+@use "variables";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
@@ -13,7 +13,7 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
   scrollbar-width: thin;
-  scrollbar-color: colors.$extra-dark-color transparent;
+  scrollbar-color: variables.$extra-dark-color transparent;
   -webkit-tap-highlight-color: transparent !important;
 }
 
@@ -31,7 +31,7 @@ body {
 
   & > .anticon.anticon-loading {
     font-size: 70px;
-    color: colors.$primary-color;
+    color: variables.$primary-color;
   }
 
   #root {
@@ -60,6 +60,7 @@ body {
   border-radius: 16px;
   min-height: 54px;
   padding: 15px 37px;
+  transition: 0.4s ease;
 
   span {
     font-weight: 600;
@@ -69,31 +70,47 @@ body {
 
   &.primary-btn {
     background-color: #4a63ab;
-    transition: 0.4s ease;
-
     &:hover {
       background-color: #4a62abd2 !important;
     }
-
     * {
       color: #fff;
+    }
+  }
+
+  &.secondary-btn {
+    background-color: #fff;
+    &:hover {
+      background-color: #ffffffbd !important;
+    }
+    * {
+      color: variables.$medium-text-color;
     }
   }
 }
 
 .main-title {
   width: 100%;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 100%;
   text-align: center;
-  color: #fff;
-  background-color: colors.$primary-color;
+  background-color: variables.$primary-color;
   padding: 40px 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   border-radius: 0 0 40px 40px;
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
+
+  &.ant-typography,
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+  }
+
+  * {
+    color: #fff !important;
+    stroke: #fff;
+  }
 }

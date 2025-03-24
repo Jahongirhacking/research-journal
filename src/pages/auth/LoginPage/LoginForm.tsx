@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Form, Image, Input, Segmented } from 'antd';
+import { Button, Divider, Flex, Form, Image, Input, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthIcon } from '../../../assets/icons';
@@ -35,7 +35,7 @@ export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Pr
 
     return (
         <div style={{ width: '100%' }} className="login-page">
-            <h2 className="main-title"><AuthIcon /> Tizimga kirish</h2>
+            <Typography.Title level={2} className="main-title"><AuthIcon /> Tizimga kirish</Typography.Title>
             <Flex vertical className='padding-box'>
                 <Flex className='auth-content'>
                     <Flex className='image-container'>

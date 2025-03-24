@@ -1,4 +1,4 @@
-import { Button, Flex, Form, Image, Input, Segmented } from 'antd';
+import { Button, Flex, Form, Image, Input, Segmented, Typography } from 'antd';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthIcon } from '../../../assets/icons';
@@ -39,7 +39,7 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
 
   return (
     <div style={{ width: '100%' }} className="login-page">
-      <h2 className="main-title"><AuthIcon /> Ro‘yxatdan o‘tish</h2>
+      <Typography.Title level={2} className="main-title"><AuthIcon /> Ro‘yxatdan o‘tish</Typography.Title>
       <Flex vertical className='padding-box'>
         <Flex className='auth-content'>
           <Flex className='image-container'>

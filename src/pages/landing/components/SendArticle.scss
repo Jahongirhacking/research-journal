@@ -1,0 +1,51 @@
+@use "../../../variables";
+
+.send-article {
+  padding-top: 157px;
+  padding-bottom: 54px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 80%;
+    max-width: 1100px;
+    min-width: 600px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, 50%);
+    background-image: url("/images/pattern_1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  .padding-box {
+    text-align: center;
+
+    .ant-typography {
+      color: variables.$medium-text-color;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 69.12px;
+      letter-spacing: -2.02px;
+      max-width: 1249px;
+    }
+
+    span {
+      max-width: 222px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 32px;
+      letter-spacing: 0.2px;
+    }
+  }
+}

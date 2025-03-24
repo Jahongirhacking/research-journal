@@ -1,8 +1,10 @@
-import { Button, Card, Flex, Typography } from "antd"
+import { Button, Card, Flex, Image, Typography } from "antd"
 import { Link } from "react-router-dom"
-import { LastJournalIcon, PopularArticlesIcon, Question1Icon, Question2Icon, Question3Icon } from "../../assets/icons"
+import { LastJournalIcon, NewsIcon, PopularArticlesIcon, Question1Icon, Question2Icon, Question3Icon } from "../../assets/icons"
+import ShortAnnouncement from "../../components/Announcement/ShortAnnouncement"
 import Article from "../../components/Article"
 import Journal from "../../components/Journal"
+import SendArticle from "./components/SendArticle"
 
 const MainPage = () => {
     const questionCards = [
@@ -27,12 +29,13 @@ const MainPage = () => {
     ]
     return (
         <Flex vertical className="main-page">
-            <Flex className="hero padding-box">
+            <Flex className="hero padding-box" gap={20} justify="space-between">
                 <Flex vertical gap={60} className="hero-content">
                     <Typography.Title level={2} style={{ margin: 0 }}>Jurnal va Maqolalar</Typography.Title>
                     <Typography.Text strong>Maqola – bu muayyan mavzuda yozilgan tahliliy, axborot beruvchi yoki ilmiy asoslangan matn bo‘lib, odatda ommaga yoki mutaxassislarga mo‘ljallangan bo‘ladi.</Typography.Text>
                     <Button className="main-btn secondary-btn">Maqola yuborish</Button>
                 </Flex>
+                <Image className="hero-img" src="/images/hero-bg-1.png" preview={false} />
             </Flex>
             <Flex vertical className="questions">
                 <Flex className="question-card-container padding-box" gap={20}>
@@ -66,7 +69,7 @@ const MainPage = () => {
                 </Link>
             </Flex>
             <Flex vertical className="last-journals padding-box" align="center" gap={58}>
-                <Typography.Title level={2} className="main-page__title"><LastJournalIcon /> Jurnalning So’ngi Sonlari </Typography.Title>
+                <Typography.Title level={2} className="main-page__title"><LastJournalIcon /> Jurnalning So’ngi Sonlari</Typography.Title>
                 <Flex gap={20} wrap className="card-container">
                     {
                         Array.from({ length: 4 }).map((_, index) => (
@@ -75,13 +78,17 @@ const MainPage = () => {
                     }
                 </Flex>
             </Flex>
-            <Flex vertical className="send-article">
-                <Flex vertical className="padding-box" align="center" gap={28}>
-                    <Typography.Title level={1} style={{ margin: 0 }}>O’z maqolangizni bizning online jurnalimizda chop eting!</Typography.Title>
-                    <Typography.Text>Taklif va Kansultatsiyalar uchun biz bilan bog’laning!</Typography.Text>
-                    <Button className="main-btn primary-btn">Maqola yuborish</Button>
+            <Flex vertical className="announcements padding-box" align="center" gap={43}>
+                <Typography.Title level={2} className="main-page__title"><NewsIcon /> Yangiliklar</Typography.Title>
+                <Flex gap={20} wrap className="card-container">
+                    {
+                        Array.from({ length: 6 }).map((_, index) => (
+                            <ShortAnnouncement key={index} />
+                        ))
+                    }
                 </Flex>
             </Flex>
+            <SendArticle />
         </Flex>
     )
 }

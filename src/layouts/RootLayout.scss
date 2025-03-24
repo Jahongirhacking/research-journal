@@ -1,11 +1,11 @@
-@use "../colors";
+@use "../variables";
 
 .root-layout {
   flex: 1;
 
   .root-header {
     .header-top {
-      background-color: colors.$primary-color;
+      background-color: variables.$primary-color;
       padding-top: 20px;
       padding-bottom: 20px;
 
@@ -38,7 +38,7 @@
     }
 
     .header-bottom {
-      background-color: colors.$secondary-color;
+      background-color: variables.$secondary-color;
       padding-top: 15px;
       padding-bottom: 15px;
       overflow-x: auto;
@@ -50,7 +50,7 @@
 
         .menu-btn {
           display: block !important;
-          background-color: colors.$primary-color;
+          background-color: variables.$primary-color;
           color: #fff;
           font-size: 17pt;
           padding: 8px 12px;
@@ -107,13 +107,16 @@
 
   .root-main {
     flex: 1;
+
+    &:not(:has(.send-article)) {
+      margin-bottom: 60px;
+    }
   }
 
   .root-footer {
-    background-color: colors.$primary-color;
+    background-color: variables.$primary-color;
     padding-top: 82px;
     padding-bottom: 34px;
-    margin-top: 60px;
 
     * {
       color: #fff !important;

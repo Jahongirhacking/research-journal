@@ -1,0 +1,25 @@
+$primary-color: #4a63ab;
+$background-color: #ffffff;
+$extra-dark-color: #b9c3e0;
+$extra-medium-color: #cdd4e9;
+$extra-light-color: #e4e8f3;
+$secondary-color: #e8effa;
+
+$dark-text-color: #181717;
+$medium-text-color: #4a63ab;
+$light-text-color: #fff;
+
+@mixin responsive_card($size_sm, $size_md, $size_lg, $gap) {
+  @media screen and (max-width: #{$size_sm}px) {
+    width: 100%;
+  }
+  @media (min-width: #{$size_sm+1}px) and (max-width: #{$size_md}px) {
+    width: calc((100% - #{$gap * 1}px) * 0.5);
+  }
+  @media (min-width: #{$size_md+1}px) and (max-width: #{$size_lg}px) {
+    width: calc((100% - #{$gap * 2}px) * 0.33);
+  }
+  @media (min-width: #{$size_lg+1}px) {
+    width: calc((100% - #{$gap * 3}px) * 0.25);
+  }
+}

@@ -1,7 +1,15 @@
+import { Flex, Typography } from "antd"
+import { PhoneIcon } from "../../assets/icons"
+import SendArticle from "./components/SendArticle"
 
 const ContactPage = () => {
     return (
-        <div>ContactPage</div>
+        <Flex vertical className="contact-page">
+            <Typography.Title className="main-title" level={2} style={{ margin: 0 }}>
+                <PhoneIcon /> Bog’lanish
+            </Typography.Title>
+            <SendArticle />
+        </Flex>
     )
 }
 
