@@ -125,12 +125,16 @@ body {
   margin: auto;
   margin-top: 60px;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 
   li.ant-pagination-item,
   .ant-pagination-prev,
   .ant-pagination-next {
     padding: 12px 24px;
     display: flex;
+    margin: 0;
     align-items: center;
     justify-content: center;
     height: 48px !important;
@@ -163,5 +167,21 @@ body {
     * {
       stroke: #4a63ab !important;
     }
+  }
+}
+
+.sub-title {
+  strong {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  * {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: variables.$medium-text-color !important;
+    stroke: variables.$medium-text-color !important;
   }
 }

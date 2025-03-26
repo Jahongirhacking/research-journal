@@ -4,7 +4,7 @@ import "./LongArticle.scss"
 
 const LongArticle = () => {
     return (
-        <Card className="long-article" title={"Infokommunikatsiya tarmoqlarda Buyurtmalarni tushish va ularga xizmat ko’rsatish jarayonlarini modellashtirish va rivojlantirish"}>
+        <Card hoverable className="long-article" title={"Infokommunikatsiya tarmoqlarda Buyurtmalarni tushish va ularga xizmat ko’rsatish jarayonlarini modellashtirish va rivojlantirish"}>
             <Flex vertical gap={20}>
                 <Flex vertical gap={10} className="meta-info">
                     <Flex wrap gap={40}>

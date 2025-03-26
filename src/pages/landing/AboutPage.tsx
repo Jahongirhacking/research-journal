@@ -1,8 +1,14 @@
 import { Flex, Image, Typography } from "antd"
+import { useEffect } from "react"
 import { CupIcon, JournalIcon, MagicIcon, StandingsIcon } from "../../assets/icons"
 import SendArticle from "./components/SendArticle"
 
 const AboutPage = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
+
     return (
         <Flex vertical className="about-page">
             <Flex vertical className="main-title" gap={40}>
@@ -14,7 +20,7 @@ const AboutPage = () => {
                     <Typography.Text strong>Jurnal pedagogika, moliya, yurispridensiya, raqamli iqtisodiyot, pedagogika va psixologiya sohalaridagi ilmiy-amaliy innovatsion yangiliklarni har tomonlama yoritishni, jurnalxonlarning pedagogik, iqtisodiy, ilmiy-innovatsion axborotga bo‘lgan talab-ehtiyojlarini yanada to‘laroq qondirishni, jurnal imkoniyatlaridan keng va samarali foydalanishni, shuningdek fan, ta’lim va ishlab chiqarishning samarali integratsiyasini olib borish, yangiliklar, ilmiy-amaliy ishlar, innovatsion g‘oyalar va ishlab chiqarishdagi yutuqlarni, shuningdek tizimda faoliyat ko‘rsatayotgan xodimlarning ilg‘or tajribalari va olib borgan ilmiy-tadqiqot natijalarini targ‘ib qilish va ommalashtirish maqsad qilingan.</Typography.Text>
                 </Flex>
             </Flex>
-            <Flex vertical className="padding-box" gap={90}>
+            <Flex vertical className="padding-box" gap={90} style={{ marginBottom: 90 }}>
                 <Flex vertical className="ambition-box" gap={60}>
                     <Flex gap={50}>
                         <CupIcon />
@@ -38,8 +44,8 @@ const AboutPage = () => {
                         </Flex>
                     </Flex>
                 </Flex>
-                <SendArticle />
             </Flex>
+            <SendArticle />
         </Flex>
     )
 }

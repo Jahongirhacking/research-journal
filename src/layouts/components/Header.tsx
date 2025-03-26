@@ -1,6 +1,6 @@
 import { MenuOutlined } from "@ant-design/icons"
-import { Button, Flex, FlexProps, Image, Select, Typography } from "antd"
-import { FC } from "react"
+import { Button, Drawer, Flex, FlexProps, Image, Select, Typography } from "antd"
+import { FC, useState } from "react"
 import { Link, NavLink } from "react-router-dom"
 import { LoginIcon, PhoneIcon, TiuIcon } from "../../assets/icons"
 
@@ -13,6 +13,7 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
         { label: "E’lonlar", href: '/announcements' },
         { label: "Bog’lanish", href: '/contact' },
     ]
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     return (
         <Flex vertical {...props}>
@@ -41,9 +42,27 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                     <Link to={"/auth/login"}>
                         <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
                     </Link>
-                    <Button className="menu-btn" icon={<MenuOutlined />} />
+                    <Button className="menu-btn main-btn secondary-btn" icon={<MenuOutlined />} onClick={() => setIsDrawerOpen(true)} />
                 </Flex>
             </Flex>
+            <Drawer
+                open={isDrawerOpen}
+                closable={false}
+                onClose={() => setIsDrawerOpen(false)}
+                placement="left"
+                width={"auto"}
+                style={{ padding: '30px 80px' }}
+            >
+                <Flex className="links" vertical>
+                    {
+                        navbar.map(el => (
+                            <NavLink className="nav-link" to={el?.href} key={el?.href || 'index'} onClick={() => setIsDrawerOpen(false)}>
+                                <Typography.Text>{el?.label}</Typography.Text>
+                            </NavLink>
+                        ))
+                    }
+                </Flex>
+            </Drawer>
         </Flex>
     )
 }

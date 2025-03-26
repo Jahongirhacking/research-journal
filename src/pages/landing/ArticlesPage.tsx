@@ -1,10 +1,16 @@
 import { Flex, Pagination, Typography } from "antd"
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { LeftIcon, PopularArticlesIcon, RightIcon } from "../../assets/icons"
 import LongArticle from "../../components/Article/LongArticle"
 import ArticleForm from "../../components/Form/ArticleForm"
 
 const ArticlesPage = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
+
     return (
         <Flex vertical className="articles-page">
             <Flex vertical className="main-title" gap={60}>

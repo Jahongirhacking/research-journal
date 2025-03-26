@@ -2,6 +2,19 @@
   border-radius: 16px;
   background-color: #e8effa;
 
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+  .ant-image {
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      transition: transform 0.4s ease;
+    }
+  }
+
   .profile-info {
     span {
       white-space: wrap;

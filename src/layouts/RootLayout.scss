@@ -9,6 +9,11 @@
       padding-top: 20px;
       padding-bottom: 20px;
 
+      @media screen and (max-width: 500px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
       * {
         color: #fff;
       }
@@ -44,27 +49,42 @@
       overflow-x: auto;
 
       @media screen and (max-width: 1200px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
         .links {
           display: none;
         }
 
         .menu-btn {
           display: block !important;
-          background-color: variables.$primary-color;
           color: #fff;
-          font-size: 17pt;
-          padding: 8px 12px;
-          height: auto;
+          font-size: 13pt;
+          padding: 8px 10px;
           width: auto;
+          min-height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .primary-btn {
+          padding: 3px 16px;
+          min-height: 40px !important;
+
+          span {
+            font-size: 10pt;
+          }
+        }
+
+        .ant-image {
+          min-width: 80px;
+
+          width: min(110px, 100%);
         }
       }
 
       .menu-btn {
         display: none;
-      }
-
-      .ant-image {
-        min-width: 120px;
       }
 
       .links {
@@ -145,6 +165,42 @@
         width: 60px;
         height: auto;
         aspect-ratio: 1 / 1;
+      }
+    }
+  }
+}
+
+.ant-drawer {
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .links {
+    gap: 14px;
+    align-items: center;
+
+    .nav-link {
+      width: 100;
+      position: relative;
+
+      &::before {
+        transition: background-color 0.2s ease;
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      &.active {
+        &::before {
+          background-color: #4a63ab;
+        }
+      }
+
+      span {
+        color: #4a63ab;
       }
     }
   }

@@ -1,4 +1,5 @@
 import { Button, Card, Flex, Image, Typography } from "antd"
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { LastJournalIcon, NewsIcon, PopularArticlesIcon, Question1Icon, Question2Icon, Question3Icon } from "../../assets/icons"
 import ShortAnnouncement from "../../components/Announcement/ShortAnnouncement"
@@ -27,6 +28,11 @@ const MainPage = () => {
             url: "#"
         },
     ]
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
+
     return (
         <Flex vertical className="main-page">
             <Flex className="hero padding-box" gap={20} justify="space-between">

@@ -1,5 +1,5 @@
 import { Button, Flex, Input, Radio, Typography } from "antd"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ClearIcon, InstagramIcon, MailIcon, PhoneIcon, SendIcon, TelegramIcon } from "../../assets/icons"
 import InputMask from "../../components/Form/InputMask"
 import SendArticle from "./components/SendArticle"
@@ -8,6 +8,10 @@ const ContactPage = () => {
     const [phone, setPhone] = useState("");
 
     console.log(phone);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
 
     return (
         <Flex vertical className="contact-page">
@@ -80,8 +84,8 @@ const ContactPage = () => {
                         </Flex>
                     </Flex>
                 </Flex>
-                <SendArticle />
             </Flex>
+            <SendArticle />
         </Flex>
     )
 }

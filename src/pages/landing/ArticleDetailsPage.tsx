@@ -3,6 +3,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import { Button, Flex, Tag, Typography } from "antd";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { AuthorsIcon, CalendarIcon, DownloadIcon, EyeIcon, JournalIcon, PopularArticlesIcon, RightIcon } from "../../assets/icons";
 
@@ -11,6 +12,10 @@ const ArticleDetailsPage = () => {
     console.log(id);
 
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
 
     return (
         <Flex vertical className="article-details-page">
