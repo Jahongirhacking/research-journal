@@ -97,6 +97,7 @@ body {
   padding: 40px 60px;
   border-radius: 0 0 40px 40px;
   margin-bottom: 60px !important;
+  overflow: hidden;
 
   @media screen and (max-width: 600px) {
     padding: 30px 20px;
@@ -117,5 +118,50 @@ body {
   * {
     color: #fff !important;
     stroke: #fff;
+  }
+}
+
+.ant-pagination {
+  margin: auto;
+  margin-top: 60px;
+  align-items: center;
+
+  li.ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px !important;
+    line-height: 100%;
+    border: 1px solid #4a63ab;
+    transition: 0.4s ease;
+
+    &.ant-pagination-item-active {
+      background-color: #4a63ab;
+      * {
+        color: #fff;
+      }
+    }
+
+    * {
+      color: #4a63ab;
+    }
+
+    a {
+      line-height: 100%;
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    &:hover {
+      background-color: #e2e9f7;
+    }
+
+    * {
+      stroke: #4a63ab !important;
+    }
   }
 }

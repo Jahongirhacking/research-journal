@@ -122,28 +122,9 @@
   }
 }
 
-.articles-page {
-  .ant-pagination {
-    margin-top: 60px;
+// .articles-page {
 
-    li {
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 48px;
-    }
-
-    .ant-pagination-prev,
-    .ant-pagination-next {
-      border: 1px solid #4a63ab;
-
-      * {
-        stroke: #4a63ab !important;
-      }
-    }
-  }
-}
+// }
 
 .article-details-page {
   .article-main {
@@ -234,11 +215,31 @@
 .about-page {
   .main-title {
     .journal-info {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 120px);
+        background-image: url("/images/hero-bg-2.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 1000px;
+        z-index: 0;
+        opacity: 0.2;
+      }
+
       span {
         text-align: left;
         font-weight: 600;
         font-size: 20px;
         line-height: 150%;
+        z-index: 1;
       }
 
       & > * {

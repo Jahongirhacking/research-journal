@@ -23,7 +23,7 @@ const ArticlesPage = () => {
                         ))
                     }
                 </Flex>
-                <Pagination total={100} nextIcon={<RightIcon />} prevIcon={<LeftIcon />} />
+                <Pagination pageSize={8} total={100} nextIcon={<RightIcon />} prevIcon={<LeftIcon />} />
             </Flex>
         </Flex>
     )
