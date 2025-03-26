@@ -1,7 +1,7 @@
-import { localStorageNames } from '@/utils/storageUtils';
-import type { Middleware } from '@reduxjs/toolkit';
-import { isRejectedWithValue } from '@reduxjs/toolkit';
-import { message } from 'antd';
+import type { Middleware } from "@reduxjs/toolkit";
+import { isRejectedWithValue } from "@reduxjs/toolkit";
+import { message } from "antd";
+import { localStorageNames } from "../../utils/storageUtils";
 
 /**
  * Log a warning and show a toast!
@@ -9,10 +9,10 @@ import { message } from 'antd';
 export const rtkQueryErrorLogger: Middleware =
   // (api: MiddlewareAPI) => (next) => (action: any) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () => next => (action: any) => {
+  () => (next) => (action: any) => {
     // RTK Query uses createAsyncThunk from redux-toolkit under the hood, so we're able to utilize these matchers!
     const status = action.payload?.originalStatus;
-    const errors = action.payload?.data?.errors ?? action.payload?.data ?? '';
+    const errors = action.payload?.data?.errors ?? action.payload?.data ?? "";
 
     if (isRejectedWithValue(action)) {
       const error_message =
@@ -20,33 +20,28 @@ export const rtkQueryErrorLogger: Middleware =
         action.payload?.data?.msg ??
         action.payload?.data?.err?.message ??
         action.payload?.data?.error ??
-        '';
+        "";
 
-      if (error_message && error_message !== 'A validation error occurred.') {
+      if (error_message && error_message !== "A validation error occurred.") {
         message.warning(error_message);
         if (
           error_message ===
-          'Your request was made with invalid or expired JSON Web Token.'
+          "Your request was made with invalid or expired JSON Web Token."
         ) {
           localStorage.removeItem(localStorageNames.token);
-          window.location.href = '/';
+          window.location.href = "/";
         }
       }
 
-      console.log('errors', errors);
-      if (errors.length > 0) {
-        errors?.forEach((item: string) => {
-          item && message.warning(item);
-        });
-      }
+      console.log("errors", errors);
 
       if (status === 500) {
         message.warning(
           "Server bilan bog'liq xatolik. Iltimos bu haqida ma'sul xodimlarga xabar bering"
         );
       } else if (status === 401 || status === 403) {
-        window.location.href = '/auth/signin';
-        message.warning('Iltimos avval tizimga kiring!');
+        window.location.href = "/auth/signin";
+        message.warning("Iltimos avval tizimga kiring!");
       }
     }
 
