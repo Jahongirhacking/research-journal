@@ -287,3 +287,88 @@
     }
   }
 }
+
+.contact-page {
+  .contact-main {
+    align-items: stretch;
+    padding: 36px 27px;
+    background-color: #e8effa;
+    border-radius: 16px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .address {
+    flex: 1;
+    min-width: min(400px, 100%);
+
+    .map {
+      height: 429px;
+      overflow: hidden;
+    }
+
+    .social-networks {
+      * {
+        color: #4a63ab;
+      }
+
+      path {
+        fill: #4a63ab;
+      }
+
+      a {
+        padding: 15px 20px;
+        height: 54px;
+        border-radius: 16px;
+        border: none;
+        flex: 1;
+
+        span {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          min-width: 0;
+        }
+      }
+    }
+  }
+
+  .contact {
+    flex: 1;
+    width: 100%;
+    min-width: min(400px, 100%);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 31px;
+
+    label:not(.ant-radio-wrapper) {
+      flex: 1;
+      min-width: min(200px, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #4a63ab;
+
+      input,
+      textarea {
+        width: 100%;
+        border: 0.5px solid #4a63ab;
+        color: #4a63ab;
+
+        &::placeholder {
+          color: #4a62ab8e;
+        }
+      }
+
+      input {
+        height: 40px;
+      }
+    }
+  }
+}
