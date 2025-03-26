@@ -37,7 +37,7 @@ const ArticleForm = () => {
     return (
         <Flex vertical className="article-form-container">
             <Flex vertical={showFilter} gap={20} wrap justify="center" align="flex-end">
-                <Row gutter={[20, 8]} className="article-inputs" wrap>
+                <Row gutter={[20, 20]} className="article-inputs" wrap>
                     <Col span={8}>
                         <label>
                             <Typography.Text strong>Maqola nomi</Typography.Text>

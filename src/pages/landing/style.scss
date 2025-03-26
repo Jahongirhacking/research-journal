@@ -144,3 +144,88 @@
     }
   }
 }
+
+.article-details-page {
+  .article-main {
+    .meta-info {
+      .ant-typography {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        &,
+        * {
+          color: variables.$medium-text-color !important;
+        }
+      }
+
+      path {
+        stroke: variables.$medium-text-color !important;
+      }
+    }
+
+    .article-description {
+      background-color: #e8effa;
+      padding: 31px 37px;
+      border-radius: 16px;
+
+      .sub-title {
+        strong {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        * {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 100%;
+          color: variables.$medium-text-color !important;
+          stroke: variables.$medium-text-color !important;
+        }
+      }
+
+      ul {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      li,
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+
+      .ant-tag {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: wrap;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 14px 10px;
+        border: none;
+
+        span {
+          font-size: 12px;
+          font-weight: 500;
+          color: #4a63ab;
+          white-space: wrap;
+        }
+      }
+    }
+
+    .rpv-core__viewer {
+      height: 80dvh !important;
+      margin-bottom: 50px;
+    }
+  }
+}

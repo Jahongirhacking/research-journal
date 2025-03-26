@@ -6,7 +6,7 @@ import RootLayout from "../layouts/RootLayout"
 import AdminPage from "../pages/admin"
 import LoginPage from "../pages/auth/LoginPage"
 import { RegisterPage } from "../pages/auth/RegisterPage"
-import { AboutPage, AnnouncementsPage, ArticlesPage, ContactPage, EditorialPage, MainPage } from "../pages/landing"
+import { AboutPage, AnnouncementsPage, ArticleDetailsPage, ArticlesPage, ContactPage, EditorialPage, MainPage } from "../pages/landing"
 import ProfilePage from "../pages/profile"
 import CallbackPage from "../pages/utils/CallbackPage"
 import { buildRoutes, IRoute } from "../utils/routeUtils"
@@ -20,6 +20,10 @@ const publicRoutes: IRoute[] = [
     {
         path: '/articles',
         element: <ArticlesPage />
+    },
+    {
+        path: '/articles/:id',
+        element: <ArticleDetailsPage />
     },
     {
         path: '/about',

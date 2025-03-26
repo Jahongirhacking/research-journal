@@ -56,7 +56,7 @@ body {
 }
 
 .main-btn {
-  border: none;
+  border: 1px solid transparent;
   border-radius: 16px;
   min-height: 54px;
   padding: 15px 37px;
@@ -80,6 +80,7 @@ body {
 
   &.secondary-btn {
     background-color: #fff;
+    border-color: #4a63ab;
     &:hover {
       background-color: #ffffffbd !important;
     }

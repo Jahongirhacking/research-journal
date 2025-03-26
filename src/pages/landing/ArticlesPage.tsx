@@ -17,8 +17,8 @@ const ArticlesPage = () => {
                 <Flex vertical gap={20} className="article-container">
                     {
                         Array.from({ length: 8 }).map((_, index) => (
-                            <Link to={''}>
-                                <LongArticle key={index} />
+                            <Link to={'/articles/1'} key={index} >
+                                <LongArticle />
                             </Link>
                         ))
                     }
