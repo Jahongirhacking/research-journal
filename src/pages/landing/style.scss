@@ -224,8 +224,65 @@
     }
 
     .rpv-core__viewer {
+      margin-top: 12px;
       height: 80dvh !important;
       margin-bottom: 50px;
+    }
+  }
+}
+
+.about-page {
+  .main-title {
+    .journal-info {
+      span {
+        text-align: left;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      & > * {
+        width: 100%;
+
+        &.ant-image {
+          max-width: 200px;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .ambition-box {
+    background-color: #e8effa;
+    padding: 40px;
+    border-radius: 16px;
+
+    & > .ant-flex {
+      align-items: center;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+
+      strong {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+      }
+
+      svg {
+        max-width: 80px;
+      }
+
+      & > * {
+        width: 100%;
+      }
     }
   }
 }

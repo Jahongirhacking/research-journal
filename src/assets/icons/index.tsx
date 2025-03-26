@@ -216,3 +216,36 @@ export const JournalIcon = () => (
     <path d="M8.5 11.4902H5.5" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
+export const CupIcon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M40.2998 49V53.2" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M30.2998 60H50.2998V58C50.2998 55.8 48.4998 54 46.2998 54H34.2998C32.0998 54 30.2998 55.8 30.2998 58V60V60Z" stroke="#4A63AB" strokeWidth="2.5" strokeMiterlimit="10" />
+    <path d="M28.2998 60H52.2998" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M40 48C32.26 48 26 41.74 26 34V28C26 23.58 29.58 20 34 20H46C50.42 20 54 23.58 54 28V34C54 41.74 47.74 48 40 48Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M26.9401 39.3002C25.4401 38.8202 24.1201 37.9402 23.0801 36.9002C21.2801 34.9002 20.0801 32.5002 20.0801 29.7002C20.0801 26.9002 22.2801 24.7002 25.0801 24.7002H26.3801C25.9801 25.6202 25.7801 26.6402 25.7801 27.7002V33.7002C25.7801 35.7002 26.2001 37.5802 26.9401 39.3002Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M53.0596 39.3002C54.5596 38.8202 55.8796 37.9402 56.9196 36.9002C58.7196 34.9002 59.9196 32.5002 59.9196 29.7002C59.9196 26.9002 57.7196 24.7002 54.9196 24.7002H53.6196C54.0196 25.6202 54.2196 26.6402 54.2196 27.7002V33.7002C54.2196 35.7002 53.7996 37.5802 53.0596 39.3002Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const MagicIcon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M22.9999 56.9999C24.6599 58.6599 27.3399 58.6599 28.9999 56.9999L54.9999 30.9999C56.6599 29.3399 56.6599 26.6599 54.9999 24.9999C53.3399 23.3399 50.6599 23.3399 48.9999 24.9999L22.9999 50.9999C21.3399 52.6599 21.3399 55.3399 22.9999 56.9999Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M52.0195 33.98L46.0195 27.98" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M33 20.88L36 20L35.12 23L36 26L33 25.12L30 26L30.88 23L30 20L33 20.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M25 32.88L28 32L27.12 35L28 38L25 37.12L22 38L22.88 35L22 32L25 32.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M55 42.88L58 42L57.12 45L58 48L55 47.12L52 48L52.88 45L52 42L55 42.88Z" stroke="#4A63AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const StandingsIcon = () => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1.5" y="1.5" width="77" height="77" rx="38.5" stroke="#4A63AB" strokeWidth="3" />
+    <path d="M33.34 44H24C21.8 44 20 45.8 20 48V60H33.34V44Z" stroke="#4A63AB" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M42.6603 36H37.3203C35.1203 36 33.3203 37.8 33.3203 40V60H46.6603V40C46.6603 37.8 44.8803 36 42.6603 36Z" stroke="#4A63AB" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M56.0002 50H46.6602V60H60.0002V54C60.0002 51.8 58.2002 50 56.0002 50Z" stroke="#4A63AB" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M41.0405 20.1401L42.1005 22.2601C42.2405 22.5601 42.6205 22.8401 42.9405 22.8801L44.8605 23.2001C46.0805 23.4001 46.3805 24.3001 45.5005 25.1601L44.0005 26.6601C43.7405 26.9201 43.6005 27.4001 43.6805 27.7401L44.1005 29.5801C44.4405 31.0401 43.6605 31.6001 42.3805 30.8401L40.5805 29.7801C40.2605 29.5801 39.7205 29.5801 39.4005 29.7801L37.6005 30.8401C36.3205 31.6001 35.5405 31.0401 35.8805 29.5801L36.3005 27.7401C36.3805 27.4001 36.2405 26.9001 35.9805 26.6601L34.5005 25.1801C33.6205 24.3001 33.9005 23.4201 35.1405 23.2201L37.0605 22.9001C37.3805 22.8401 37.7605 22.5601 37.9005 22.2801L38.9605 20.1601C39.5405 19.0001 40.4605 19.0001 41.0405 20.1401Z" stroke="#4A63AB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
