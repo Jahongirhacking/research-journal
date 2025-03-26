@@ -1,6 +1,6 @@
 import { ArrowLeftOutlined, CheckOutlined } from '@ant-design/icons';
 import { Button, Flex, Input, InputRef, message, Typography } from 'antd';
-import { useContext, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import ControlledFlowContext from '../../../components/ControlledFlow/ControlledFlowContext';
 import { isAlpha, nonAlphabeticCharacters } from '../../../utils/stringUtils';
 
@@ -91,8 +91,13 @@ const SetPassword = ({ handleSubmit }: { handleSubmit: (data: object) => Promise
     }
   };
 
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [])
+
   return (
-    <Flex vertical gap={24} className="set-password-page">
+    <Flex vertical gap={24} className="set-password-page padding-box" style={{ marginTop: 40 }}>
       <Typography.Title level={2} style={{ margin: 0 }}>
         Parol yaratish
       </Typography.Title>
@@ -127,13 +132,13 @@ const SetPassword = ({ handleSubmit }: { handleSubmit: (data: object) => Promise
 
       <Flex vertical gap={16}>
         <Button
-          className="main-type-btn primary-btn confirm-btn"
+          className="main-btn primary-btn confirm-btn"
           onClick={onNext}
         >
           Tasdiqlash
         </Button>
         <Button
-          className="main-type-btn secondary-btn prev-btn"
+          className="main-btn secondary-btn prev-btn"
           icon={<ArrowLeftOutlined />}
           iconPosition="start"
           onClick={onPrev}

@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Role } from "../../services/types";
 import {
   getLocalStorage,
   localStorageNames,
@@ -18,7 +17,7 @@ const userSlice = createSlice({
   name: "user-slice",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<{ token: string; role: Role }>) => {
+    login: (state, action: PayloadAction<{ token: string }>) => {
       state.token = action.payload.token;
       setLocalStorage(localStorageNames.token, action.payload.token);
     },

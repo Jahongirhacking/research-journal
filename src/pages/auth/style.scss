@@ -100,3 +100,26 @@
     }
   }
 }
+
+.set-password-page {
+  margin-top: 40px;
+
+  input {
+    height: 40px;
+  }
+
+  .anticon-check {
+    &,
+    * {
+      color: green !important;
+    }
+  }
+}
+
+.get-sms-page {
+  margin-top: 40px;
+
+  input {
+    height: 52px;
+  }
+}

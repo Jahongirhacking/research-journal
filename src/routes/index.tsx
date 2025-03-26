@@ -8,6 +8,9 @@ import LoginPage from "../pages/auth/LoginPage"
 import { RegisterPage } from "../pages/auth/RegisterPage"
 import { AboutPage, AnnouncementsPage, ArticleDetailsPage, ArticlesPage, ContactPage, EditorialPage, MainPage } from "../pages/landing"
 import ProfilePage from "../pages/profile"
+import EditProfile from "../pages/profile/EditProfile"
+import ProfileArticles from "../pages/profile/ProfileArticles"
+import SendArticle from "../pages/profile/SendArticle"
 import CallbackPage from "../pages/utils/CallbackPage"
 import { buildRoutes, IRoute } from "../utils/routeUtils"
 import NotFoundPage from "./NotFoundPage"
@@ -51,7 +54,21 @@ const publicRoutes: IRoute[] = [
 const privateRoutes: IRoute[] = [
     {
         path: "profile",
-        element: <ProfilePage />
+        element: <ProfilePage />,
+        children: [
+            {
+                path: 'edit',
+                element: <EditProfile />
+            },
+            {
+                path: 'articles',
+                element: <ProfileArticles />
+            },
+            {
+                path: 'send-article',
+                element: <SendArticle />
+            },
+        ]
     },
     {
         path: "admin",

@@ -20,7 +20,7 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
       passport,
       pinfl,
     });
-  }, [phone, passport, pinfl]);
+  }, [phone, passport, pinfl, form]);
 
   const onNext = async () => {
     try {

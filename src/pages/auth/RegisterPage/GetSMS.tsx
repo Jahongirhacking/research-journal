@@ -3,6 +3,8 @@ import { ArrowLeftOutlined } from '@ant-design/icons';
 import { Button, Flex, Input, InputRef, Typography } from 'antd';
 import { useContext, useEffect, useRef, useState } from 'react';
 import ControlledFlowContext from '../../../components/ControlledFlow/ControlledFlowContext';
+import { useRequestOtpMutation } from '../../../services/users';
+import { IRegister } from '../../../services/users/type';
 
 const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<boolean> }) => {
   const SMS_LENGTH = 4;
@@ -10,20 +12,19 @@ const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bool
   const { setNextIndex, data } = useContext(ControlledFlowContext);
   const [sms, setSms] = useState(INITIAL_SMS);
   const inputRef = useRef<InputRef>(null);
-  console.log(data);
-  // const [requestOtp] = useRequestOtpMutation();
+  const [requestOtp] = useRequestOtpMutation();
 
   const handleRequestOtp = async () => {
-    // try {
-    //   await requestOtp({ phoneNumber: (data as IRegister).phoneNumber });
-    // } catch (err) {
-    //   console.error(err);
-    // }
+    try {
+      await requestOtp({ phoneNumber: (data as IRegister).phoneNumber }).unwrap();
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  // useEffect(() => {
-  //   handleRequestOtp();
-  // }, [requestOtp])
+  useEffect(() => {
+    handleRequestOtp();
+  }, [])
 
   useEffect(() => {
     if (inputRef?.current) {
@@ -82,8 +83,12 @@ const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bool
     }
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [])
+
   return (
-    <Flex vertical gap={24} className="get-sms-page">
+    <Flex vertical gap={24} className="get-sms-page padding-box">
       <Flex vertical gap={8}>
         <Typography.Title level={3} style={{ margin: 0 }}>
           SMS kodni tasdiqlash
@@ -111,13 +116,13 @@ const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bool
         </Flex>
         <Flex vertical gap={16}>
           <Button
-            className="main-type-btn primary-btn sms-prev-btn"
+            className="main-btn primary-btn sms-prev-btn"
             onClick={onNext}
           >
             Tasdiqlash
           </Button>
           <Button
-            className="main-type-btn secondary-btn sms-prev-btn"
+            className="main-btn secondary-btn sms-prev-btn"
             icon={<ArrowLeftOutlined />}
             iconPosition="start"
             onClick={onPrev}

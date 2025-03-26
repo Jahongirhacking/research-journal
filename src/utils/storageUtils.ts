@@ -1,7 +1,6 @@
 export const localStorageNames = {
   token: "token",
-  role: "role",
-  photo: "photo",
+  deviceId: "device-id",
 };
 
 export const getExistedOne = (...args: string[] | number[] | object[]) => {

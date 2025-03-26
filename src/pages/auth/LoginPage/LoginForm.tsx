@@ -1,8 +1,10 @@
 import { Button, Divider, Flex, Form, Image, Input, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from "uuid";
 import { AuthIcon } from '../../../assets/icons';
 import InputMask from '../../../components/Form/InputMask';
+import { getLocalStorage, localStorageNames, setLocalStorage } from '../../../utils/storageUtils';
 
 export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<boolean> }) => {
     const navigate = useNavigate();
@@ -17,16 +19,15 @@ export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Pr
             phoneNumber,
             password,
         });
-    }, [phoneNumber, password]);
+    }, [phoneNumber, password, form]);
 
     const handleLogin = async () => {
-        await handleSubmit({});
-        // let deviceId = getLocalStorage(localStorageNames.deviceId);
-        // if (!deviceId) {
-        //     deviceId = uuidv4();
-        //     setLocalStorage(localStorageNames.deviceId, deviceId);
-        // }
-        // handleSubmit({ deviceId, phoneNumber: phoneNumber.split('').filter((el) => !isNaN(Number.parseInt(el))).join(''), password });
+        let deviceId = getLocalStorage(localStorageNames.deviceId);
+        if (!deviceId) {
+            deviceId = uuidv4();
+            setLocalStorage(localStorageNames.deviceId, deviceId);
+        }
+        handleSubmit({ deviceId, phoneNumber: phoneNumber.split('').filter((el) => !isNaN(Number.parseInt(el))).join(''), password });
     };
 
     const handleOneIdLogin = () => {

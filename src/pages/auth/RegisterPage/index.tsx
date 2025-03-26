@@ -1,7 +1,11 @@
 
-import { Flex } from 'antd';
+import { Flex, message } from 'antd';
 import { useState } from 'react';
+import { v4 as uuidv4 } from "uuid";
 import ControlledFlow from '../../../components/ControlledFlow/ControlledFlow';
+import { useRegisterMutation } from "../../../services/users";
+import { IRegister } from '../../../services/users/type';
+import { getLocalStorage, localStorageNames, setLocalStorage } from '../../../utils/storageUtils';
 import GetPhone from './GetPhone';
 import GetSMS from './GetSMS';
 import SetPassword from './SetPassword';
@@ -9,17 +13,17 @@ import SetPassword from './SetPassword';
 export const RegisterPage = () => {
   const [index, setIndex] = useState(0);
   const [data, setData] = useState({});
-  // const [register] = useRegisterMutation();
+  const [register] = useRegisterMutation();
 
   const handleGetPhone = async (data: object) => {
     console.log(data);
+    let deviceId = getLocalStorage(localStorageNames.deviceId);
+    if (!deviceId) {
+      deviceId = uuidv4();
+      setLocalStorage(localStorageNames.deviceId, deviceId);
+    }
+    setData((prevData) => ({ ...prevData, ...data, deviceId, deviceName: navigator.userAgent }));
     return true;
-    // let deviceId = getLocalStorage(localStorageNames.deviceId);
-    // if (!deviceId) {
-    //   deviceId = uuidv4();
-    //   setLocalStorage(localStorageNames.deviceId, deviceId);
-    // }
-    // setData((prevData) => ({ ...prevData, ...data, deviceId, deviceName: navigator.userAgent }));
   };
 
   const handleSetPassword = async (data: object) => {
@@ -28,26 +32,26 @@ export const RegisterPage = () => {
   };
 
   const handleGetSMS = async (data: object) => {
-    console.log(data);
-    return true;
-    //   try {
-    //     let newData = data;
-    //     setData((prevData) => {
-    //       newData = { ...prevData, ...data };
-    //       return newData;
-    //     })
-    //     const res = await register(newData as IRegister);
-    //     console.log('res', res);
-    //     const isSuccess = !!(res as IBaseDataRes<ILoginRes>).data.accessToken;
-    //     if (isSuccess) {
-    //       message.success((res as IBaseDataRes<ILoginRes>).data.message)
-    //     } else {
-    //       message.error((res as IBaseDataRes<ILoginRes>).data.message)
-    //     }
-    //     return isSuccess;
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
+    console.log("hi", data);
+    try {
+      let newData = data;
+      setData((prevData) => {
+        newData = { ...prevData, ...data };
+        return newData;
+      })
+      const res = await register(newData as IRegister).unwrap();
+      console.log('res', res);
+      const isSuccess = !!res.accessToken;
+      if (isSuccess) {
+        message.success(res.message)
+      } else {
+        message.error(res.message)
+      }
+      return isSuccess;
+    } catch (err) {
+      console.error(err);
+      return false;
+    }
   };
 
   return (
