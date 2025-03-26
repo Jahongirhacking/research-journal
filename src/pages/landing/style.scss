@@ -96,7 +96,7 @@
     .card-container {
       justify-content: flex-start;
 
-      .article-card {
+      .short-article-card {
         @include variables.responsive_card(700, 1100, 1400, 20);
       }
     }
@@ -119,5 +119,28 @@
   .announcements {
     padding-top: 78px;
     padding-bottom: 73px;
+  }
+}
+
+.articles-page {
+  .ant-pagination {
+    margin-top: 60px;
+
+    li {
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      border: 1px solid #4a63ab;
+
+      * {
+        stroke: #4a63ab !important;
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@ import { Button, Card, Flex, Image, Typography } from "antd"
 import { Link } from "react-router-dom"
 import { LastJournalIcon, NewsIcon, PopularArticlesIcon, Question1Icon, Question2Icon, Question3Icon } from "../../assets/icons"
 import ShortAnnouncement from "../../components/Announcement/ShortAnnouncement"
-import Article from "../../components/Article"
+import ShortArticle from "../../components/Article/ShortArticle"
 import Journal from "../../components/Journal"
 import SendArticle from "./components/SendArticle"
 
@@ -60,7 +60,7 @@ const MainPage = () => {
                 <Flex gap={20} wrap className="card-container">
                     {
                         Array.from({ length: 6 }).map((_, index) => (
-                            <Article key={index} />
+                            <ShortArticle key={index} />
                         ))
                     }
                 </Flex>

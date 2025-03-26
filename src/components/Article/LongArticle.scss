@@ -1,0 +1,40 @@
+.long-article {
+  background-color: #ecf3fc;
+  border-radius: 16px;
+  border: none;
+
+  .ant-card-head {
+    border-bottom: 1px solid #4a63ab;
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+    }
+  }
+
+  .ant-card-body {
+    padding: 11px 17px;
+
+    .meta-info {
+      .ant-typography {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        &,
+        * {
+          color: #4a63ab !important;
+          stroke: #4a63ab !important;
+        }
+      }
+    }
+
+    .article-annotation {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import { Card, Flex, Tag, Typography } from "antd"
 import { Link } from "react-router-dom"
 import { AuthorsIcon } from "../../assets/icons"
-import "./style.scss"
+import "./ShortArticle.scss"
 
-const Article = () => {
+const ShortArticle = () => {
     return (
-        <Card className="article-card">
+        <Card className="short-article-card">
             <Flex vertical gap={20}>
                 <Typography.Title level={3} style={{ margin: 0 }}>Infokommunikatsiya tarmoqlarda Buyurtmalarni tushish va ularga xizmat ko’rsatish jarayonlarini modellashtirish</Typography.Title>
                 <Tag>Ilmiy maqola</Tag>
@@ -19,4 +19,4 @@ const Article = () => {
     )
 }
 
-export default Article
+export default ShortArticle
