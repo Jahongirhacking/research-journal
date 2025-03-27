@@ -285,3 +285,29 @@ export const ConferenceIcon = () => (
     </g>
   </svg>
 )
+
+export const EditIcon = () => (
+  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.75" y="0.75" width="58.5" height="58.5" rx="29.25" stroke="#4A63AB" strokeWidth="1.5" />
+    <path d="M30 34.5C32.4853 34.5 34.5 32.4853 34.5 30C34.5 27.5147 32.4853 25.5 30 25.5C27.5147 25.5 25.5 27.5147 25.5 30C25.5 32.4853 27.5147 34.5 30 34.5Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M15 31.3201V28.6801C15 27.1201 16.275 25.8301 17.85 25.8301C20.565 25.8301 21.675 23.9101 20.31 21.5551C19.53 20.2051 19.995 18.4501 21.36 17.6701L23.955 16.1851C25.14 15.4801 26.67 15.9001 27.375 17.0851L27.54 17.3701C28.89 19.7251 31.11 19.7251 32.475 17.3701L32.64 17.0851C33.345 15.9001 34.875 15.4801 36.06 16.1851L38.655 17.6701C40.02 18.4501 40.485 20.2051 39.705 21.5551C38.34 23.9101 39.45 25.8301 42.165 25.8301C43.725 25.8301 45.015 27.1051 45.015 28.6801V31.3201C45.015 32.8801 43.74 34.1701 42.165 34.1701C39.45 34.1701 38.34 36.0901 39.705 38.4451C40.485 39.8101 40.02 41.5501 38.655 42.3301L36.06 43.8151C34.875 44.5201 33.345 44.1002 32.64 42.9152L32.475 42.6301C31.125 40.2751 28.905 40.2751 27.54 42.6301L27.375 42.9152C26.67 44.1002 25.14 44.5201 23.955 43.8151L21.36 42.3301C19.995 41.5501 19.53 39.7951 20.31 38.4451C21.675 36.0901 20.565 34.1701 17.85 34.1701C16.275 34.1701 15 32.8801 15 31.3201Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const ArticlesIcon = () => (
+  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.75" y="0.75" width="58.5" height="58.5" rx="29.25" stroke="#4A63AB" strokeWidth="1.5" />
+    <path d="M43.5 22.5V37.5C43.5 42 41.25 45 36 45H24C18.75 45 16.5 42 16.5 37.5V22.5C16.5 18 18.75 15 24 15H36C41.25 15 43.5 18 43.5 22.5Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M35.25 15V26.79C35.25 27.45 34.47 27.78 33.99 27.345L30.51 24.135C30.225 23.865 29.775 23.865 29.49 24.135L26.01 27.345C25.53 27.78 24.75 27.45 24.75 26.79V15H35.25Z" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M31.875 33H38.25" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M25.5 39H38.25" stroke="#4A63AB" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const SendArticelIcon = () => (
+  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.75" y="0.75" width="58.5" height="58.5" rx="29.25" stroke="#4A63AB" strokeWidth="1.5" />
+    <path d="M18.345 33.7351L24.765 20.8951C27.645 15.1351 32.355 15.1351 35.235 20.8951L41.655 33.7351C45.975 42.3751 42.435 45.9001 33.81 41.5801L31.215 40.2751C30.555 39.9451 29.46 39.9451 28.8 40.2751L26.19 41.5801C17.565 45.9001 14.025 42.3601 18.345 33.7351Z" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M30 39.8398V31.7398" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)

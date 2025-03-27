@@ -1,11 +1,14 @@
 
-import { Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from 'react-router-dom';
+import { RootState } from '../../store/store';
 import './style.scss';
 
 const RootLayout = () => {
-  // const access = useSelector((store: RootState) => store.authSlice.access);
+  const token = useSelector((store: RootState) => store.user.token);
+  console.log(token);
 
-  // if (access) return <Navigate to={paths.profile} />;
+  if (token) return <Navigate to={'/profile/send-article'} />;
 
   return (
     <div className="login">

@@ -6,6 +6,7 @@ import RootLayout from "../layouts/RootLayout"
 import AdminPage from "../pages/admin"
 import LoginPage from "../pages/auth/LoginPage"
 import { RegisterPage } from "../pages/auth/RegisterPage"
+import { default as AuthRootLayout } from "../pages/auth/RootLayout"
 import { AboutPage, AnnouncementsPage, ArticleDetailsPage, ArticlesPage, ContactPage, EditorialPage, MainPage } from "../pages/landing"
 import ProfilePage from "../pages/profile"
 import EditProfile from "../pages/profile/EditProfile"
@@ -44,9 +45,15 @@ const publicRoutes: IRoute[] = [
         path: '/contact',
         element: <ContactPage />
     },
-    { path: "auth/login", element: <LoginPage /> },
-    { path: "auth/register", element: <RegisterPage /> },
-    { path: "auth/callback", element: <CallbackPage /> },
+    {
+        path: 'auth',
+        element: <AuthRootLayout />,
+        children: [
+            { path: 'login', element: <LoginPage /> },
+            { path: "register", element: <RegisterPage /> },
+            { path: "callback", element: <CallbackPage /> },
+        ]
+    },
     { path: "test/component", element: <TestComponent /> },
     // { path: "error", element: <ErrorPage /> }
 ];

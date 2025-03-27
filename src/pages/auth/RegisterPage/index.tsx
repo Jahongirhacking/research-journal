@@ -32,7 +32,6 @@ export const RegisterPage = () => {
   };
 
   const handleGetSMS = async (data: object) => {
-    console.log("hi", data);
     try {
       let newData = data;
       setData((prevData) => {
@@ -40,7 +39,6 @@ export const RegisterPage = () => {
         return newData;
       })
       const res = await register(newData as IRegister).unwrap();
-      console.log('res', res);
       const isSuccess = !!res.accessToken;
       if (isSuccess) {
         message.success(res.message)

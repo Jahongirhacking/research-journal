@@ -1,0 +1,56 @@
+.profile-page {
+  .profile-card {
+    width: 100%;
+    max-width: min(875px, 100%);
+    background-color: #e8effa;
+    border-radius: 16px;
+
+    strong {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #181717;
+    }
+
+    .profile-info {
+      .ant-typography {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        span {
+          color: #181717;
+        }
+
+        path {
+          stroke: #181717;
+        }
+      }
+    }
+  }
+
+  .profile-tabs {
+    flex-wrap: wrap;
+
+    a {
+      flex: 1;
+    }
+
+    button {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      background-color: #e8effa !important;
+      border-radius: 16px;
+      border: none;
+
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+      }
+    }
+  }
+}

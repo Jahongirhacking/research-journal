@@ -1,9 +1,10 @@
 
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { Button, Flex, Input, InputRef, Typography } from 'antd';
-import { useContext, useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import ControlledFlowContext from '../../../components/ControlledFlow/ControlledFlowContext';
-import { useRequestOtpMutation } from '../../../services/users';
+import { baseUrl } from '../../../services/api/const';
 import { IRegister } from '../../../services/users/type';
 
 const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<boolean> }) => {
@@ -12,19 +13,18 @@ const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bool
   const { setNextIndex, data } = useContext(ControlledFlowContext);
   const [sms, setSms] = useState(INITIAL_SMS);
   const inputRef = useRef<InputRef>(null);
-  const [requestOtp] = useRequestOtpMutation();
 
-  const handleRequestOtp = async () => {
+  const handleRequestOtp = useCallback(async () => {
     try {
-      await requestOtp({ phoneNumber: (data as IRegister).phoneNumber }).unwrap();
+      await axios.post(`${baseUrl}/auth/request-otp`, { phoneNumber: (data as IRegister).phoneNumber });
     } catch (err) {
       console.error(err);
     }
-  }
+  }, [])
 
   useEffect(() => {
     handleRequestOtp();
-  }, [])
+  }, [handleRequestOtp])
 
   useEffect(() => {
     if (inputRef?.current) {
@@ -68,7 +68,7 @@ const GetSMS = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bool
 
   const onNext = async () => {
     try {
-      const res = await handleSubmit({ otp: sms.join('') });
+      const res = await handleSubmit({ otp: sms.filter(el => !isNaN(Number(el))).join('') });
       if (!res) {
         setSms(INITIAL_SMS);
       }
