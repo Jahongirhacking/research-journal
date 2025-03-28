@@ -8,6 +8,20 @@
   .ant-card-body {
     padding: 0;
 
+    .card-inner {
+      @media screen and (max-width: 400px) {
+        flex-direction: column;
+
+        .ant-image {
+          order: 1;
+        }
+
+        & > .ant-flex {
+          order: 2;
+        }
+      }
+    }
+
     span.ant-typography {
       font-weight: 600;
       font-size: 14px;
@@ -19,11 +33,15 @@
         font-size: 16px;
         line-height: 100%;
         color: #000;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
   }
 
   .ant-image {
-    max-width: 130px;
+    max-width: min(130px, 50%);
   }
 }

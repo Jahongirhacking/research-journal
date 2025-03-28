@@ -1,8 +1,10 @@
-import { MenuOutlined } from "@ant-design/icons"
-import { Button, Drawer, Flex, FlexProps, Image, Select, Typography } from "antd"
+import { LogoutOutlined, MenuOutlined } from "@ant-design/icons"
+import { Avatar, Button, Drawer, Flex, FlexProps, Image, Select, Typography } from "antd"
 import { FC, useState } from "react"
+import { useSelector } from "react-redux"
 import { Link, NavLink } from "react-router-dom"
 import { LoginIcon, PhoneIcon, TiuIcon } from "../../assets/icons"
+import { RootState } from "../../store/store"
 
 const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
     const navbar = [
@@ -12,8 +14,10 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
         { label: "Tahririyat", href: '/editorial' },
         { label: "E’lonlar", href: '/announcements' },
         { label: "Bog’lanish", href: '/contact' },
+        { label: "Maqola yuborish", href: '/profile/send-article' },
     ]
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const { token, user } = useSelector((store: RootState) => store.user);
 
     return (
         <Flex vertical {...props}>
@@ -39,9 +43,34 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                     }
                 </Flex>
                 <Flex gap={24} align="center">
-                    <Link to={"/auth/login"}>
-                        <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
-                    </Link>
+                    {
+                        token ? (
+                            <Flex gap={9} className="profile-link" align="center">
+                                <Flex vertical gap={4} align="flex-end">
+                                    <Typography.Text strong>{user?.firstName}</Typography.Text>
+                                    <Button
+                                        type="text"
+                                        color="danger"
+                                        variant="text"
+                                        size="small"
+                                        icon={<LogoutOutlined />}
+                                    >
+                                        Chiqish
+                                    </Button>
+                                </Flex>
+                                <Link to={"/profile"}>
+                                    <Avatar src={user?.photoId}>
+                                        {`${(user?.firstName ?? "")[0]}${(user?.lastName ?? "")[0]}`}
+                                    </Avatar>
+                                </Link>
+                            </Flex>
+                        ) : (
+                            <Link to={"/auth/login"}>
+                                <Button icon={<LoginIcon />} className="main-btn primary-btn">Kirish</Button>
+                            </Link>
+                        )
+                    }
+
                     <Button className="menu-btn main-btn secondary-btn" icon={<MenuOutlined />} onClick={() => setIsDrawerOpen(true)} />
                 </Flex>
             </Flex>

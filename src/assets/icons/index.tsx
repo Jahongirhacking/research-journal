@@ -304,10 +304,34 @@ export const ArticlesIcon = () => (
   </svg>
 )
 
-export const SendArticelIcon = () => (
+export const SendArticleIcon = () => (
   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="0.75" y="0.75" width="58.5" height="58.5" rx="29.25" stroke="#4A63AB" strokeWidth="1.5" />
     <path d="M18.345 33.7351L24.765 20.8951C27.645 15.1351 32.355 15.1351 35.235 20.8951L41.655 33.7351C45.975 42.3751 42.435 45.9001 33.81 41.5801L31.215 40.2751C30.555 39.9451 29.46 39.9451 28.8 40.2751L26.19 41.5801C17.565 45.9001 14.025 42.3601 18.345 33.7351Z" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M30 39.8398V31.7398" stroke="#4A63AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const JobIcon = () => (
+  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.50862 22H16.5086C20.5286 22 21.2486 20.39 21.4586 18.43L22.2086 10.43C22.4786 7.99 21.7786 6 17.5086 6H7.50862C3.23862 6 2.53862 7.99 2.80862 10.43L3.55862 18.43C3.76862 20.39 4.48862 22 8.50862 22Z" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.50781 6V5.2C8.50781 3.43 8.50781 2 11.7078 2H13.3078C16.5078 2 16.5078 3.43 16.5078 5.2V6" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M14.5078 13V14C14.5078 14.01 14.5078 14.01 14.5078 14.02C14.5078 15.11 14.4978 16 12.5078 16C10.5278 16 10.5078 15.12 10.5078 14.03V13C10.5078 12 10.5078 12 11.5078 12H13.5078C14.5078 12 14.5078 12 14.5078 13Z" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M22.1578 11C19.8478 12.68 17.2078 13.68 14.5078 14.02" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M3.12695 11.27C5.37695 12.81 7.91695 13.74 10.507 14.03" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const EducationIcon = () => (
+  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.8778 2.14984L21.8778 5.74982C22.2278 5.88982 22.5078 6.30981 22.5078 6.67981V9.99982C22.5078 10.5498 22.0578 10.9998 21.5078 10.9998H3.50781C2.95781 10.9998 2.50781 10.5498 2.50781 9.99982V6.67981C2.50781 6.30981 2.78782 5.88982 3.13782 5.74982L12.1378 2.14984C12.3378 2.06984 12.6778 2.06984 12.8778 2.14984Z" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M22.5078 22H2.50781V19C2.50781 18.45 2.95781 18 3.50781 18H21.5078C22.0578 18 22.5078 18.45 22.5078 19V22Z" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M4.50781 18V11" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.50781 18V11" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12.5078 18V11" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16.5078 18V11" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M20.5078 18V11" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M1.50781 22H23.5078" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M12.5078 8.5C13.3362 8.5 14.0078 7.82843 14.0078 7C14.0078 6.17157 13.3362 5.5 12.5078 5.5C11.6794 5.5 11.0078 6.17157 11.0078 7C11.0078 7.82843 11.6794 8.5 12.5078 8.5Z" stroke="#181717" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )

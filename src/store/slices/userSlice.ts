@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { authApi } from "../../services/users";
+import { IProfile } from "../../services/users/type";
 import {
   getLocalStorage,
   localStorageNames,
@@ -8,10 +9,12 @@ import {
 
 interface IProps {
   token: string;
+  user: IProfile | null;
 }
 
 const initialState: IProps = {
   token: getLocalStorage(localStorageNames.token) ?? "",
+  user: null,
 };
 
 const userSlice = createSlice({
@@ -60,6 +63,18 @@ const userSlice = createSlice({
               type: "auth/verify",
             });
           }
+        }
+      )
+      .addMatcher(
+        authApi.endpoints.getResearcherUser.matchFulfilled,
+        (state, { payload }) => {
+          state.user = payload;
+        }
+      )
+      .addMatcher(
+        authApi.endpoints.getResearcherUser.matchRejected,
+        (state) => {
+          userSlice.caseReducers.logout(state);
         }
       ),
 });

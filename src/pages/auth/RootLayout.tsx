@@ -8,7 +8,7 @@ const RootLayout = () => {
   const token = useSelector((store: RootState) => store.user.token);
   console.log(token);
 
-  if (token) return <Navigate to={'/profile/send-article'} />;
+  if (token) return <Navigate to={'/profile'} />;
 
   return (
     <div className="login">

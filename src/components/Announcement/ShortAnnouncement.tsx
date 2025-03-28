@@ -6,7 +6,7 @@ const ShortAnnouncement = () => {
     return (
         <Card className="short-announcement">
             <Link to={'#'}>
-                <Flex gap={16} align="center" justify="center">
+                <Flex gap={16} align="center" justify="center" className="card-inner">
                     <Flex vertical gap={15}>
                         <Flex gap={12} wrap>
                             <Typography.Text>Saidamir Shamsiddinov</Typography.Text>
