@@ -10,6 +10,7 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body,
       }),
+      invalidatesTags: ["User"],
     }),
 
     requestOtp: build.mutation<void, { phoneNumber: ILogin["phoneNumber"] }>({
@@ -26,6 +27,7 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body,
       }),
+      invalidatesTags: ["User"],
     }),
 
     verifyOtp: build.mutation<ILoginRes, IVerifyLogin>({
@@ -34,10 +36,12 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body,
       }),
+      invalidatesTags: ["User"],
     }),
 
     getResearcherUser: build.query<IProfile, void>({
       query: () => `/ResearcherUser/Get`,
+      providesTags: ["User"],
     }),
 
     updateResearcherUser: build.mutation<void, IProfile>({
@@ -46,6 +50,7 @@ export const authApi = api.injectEndpoints({
         method: "POST",
         body,
       }),
+      invalidatesTags: ["User"],
     }),
   }),
 });

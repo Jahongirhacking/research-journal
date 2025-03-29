@@ -37,7 +37,10 @@ const LoginPage = () => {
         newData = { ...prev, ...data };
         return newData;
       })
-      await verify(newData as IVerifyLogin).unwrap();
+      const res = await verify(newData as IVerifyLogin).unwrap();
+      if (!res.accessToken) {
+        message.warning("SMS kodi mos kelmadi yoki eskirgan");
+      }
       return true;
     } catch (err) {
       console.log(err);

@@ -1,9 +1,10 @@
 import { LogoutOutlined, MenuOutlined } from "@ant-design/icons"
 import { Avatar, Button, Drawer, Flex, FlexProps, Image, Select, Typography } from "antd"
 import { FC, useState } from "react"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { Link, NavLink } from "react-router-dom"
 import { LoginIcon, PhoneIcon, TiuIcon } from "../../assets/icons"
+import { logout } from "../../store/slices/userSlice"
 import { RootState } from "../../store/store"
 
 const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
@@ -18,6 +19,7 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
     ]
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const { token, user } = useSelector((store: RootState) => store.user);
+    const dispatch = useDispatch();
 
     return (
         <Flex vertical {...props}>
@@ -47,20 +49,21 @@ const Header: FC<Omit<FlexProps, 'children'>> = (props) => {
                         token ? (
                             <Flex gap={9} className="profile-link" align="center">
                                 <Flex vertical gap={4} align="flex-end">
-                                    <Typography.Text strong>{user?.firstName}</Typography.Text>
+                                    <Typography.Text strong>{user?.firstName ?? ""} {user?.lastName[0] ?? ""}.</Typography.Text>
                                     <Button
                                         type="text"
                                         color="danger"
                                         variant="text"
                                         size="small"
                                         icon={<LogoutOutlined />}
+                                        onClick={() => dispatch(logout())}
                                     >
                                         Chiqish
                                     </Button>
                                 </Flex>
                                 <Link to={"/profile"}>
                                     <Avatar src={user?.photoId}>
-                                        {`${(user?.firstName ?? "")[0]}${(user?.lastName ?? "")[0]}`}
+                                        {`${(user?.firstName ?? "")[0] ?? ""}${(user?.lastName ?? "")[0] ?? ""}`}
                                     </Avatar>
                                 </Link>
                             </Flex>

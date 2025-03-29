@@ -16,7 +16,7 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithRetry = retry(baseQuery, { maxRetries: 1 });
+const baseQueryWithRetry = retry(baseQuery, { maxRetries: 0 });
 
 /**
  * Create a base API to inject endpoints into elsewhere.
@@ -43,6 +43,7 @@ export const api = createApi({
    * If you want all endpoints defined in the same file, they could be included here instead
    */
   endpoints: () => ({}),
+  tagTypes: ["User"],
 });
 
 export const enhancedApi = api.enhanceEndpoints({

@@ -9,10 +9,10 @@ const ProfileCard = () => {
         <Card className="profile-card">
             <Flex gap={20}>
                 <Avatar shape="square" src={user?.photoId}>
-                    {`${(user?.firstName ?? "")[0]}${(user?.lastName ?? "")[0]}`}
+                    {`${(user?.firstName ?? "")[0] ?? ""}${(user?.lastName ?? "")[0] ?? ""}`}
                 </Avatar>
                 <Flex vertical gap={25}>
-                    <Typography.Text strong>{`${user?.fullName}`}</Typography.Text>
+                    <Typography.Text strong>{`${user?.fullName ?? ""}`}</Typography.Text>
                     <Flex vertical gap={20} className="profile-info">
                         <Typography.Text><MailIcon /> {user?.email || "Email topilmadi"}</Typography.Text>
                         <Typography.Text><PhoneIcon /> +{user?.phoneNumber || "Telefon raqam topilmadi"}</Typography.Text>
