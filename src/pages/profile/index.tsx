@@ -1,7 +1,8 @@
-import { Button, Flex, Typography } from "antd"
-import { Link, Outlet, useLocation } from "react-router-dom"
-import { ArticlesIcon, EditIcon, ProfileIcon, SendArticleIcon } from "../../assets/icons"
+import { Flex, Typography } from "antd"
+import { Outlet, useLocation } from "react-router-dom"
+import { ProfileIcon } from "../../assets/icons"
 import ProfileCard from "./components/ProfileCard"
+import ProfileTabs from "./components/ProfileTabs"
 import "./style.scss"
 
 const ProfilePage = () => {
@@ -17,17 +18,7 @@ const ProfilePage = () => {
                             <Flex>
                                 <ProfileCard />
                             </Flex>
-                            <Flex gap={20} className="profile-tabs">
-                                <Link to={"/profile/edit"}>
-                                    <Button icon={<EditIcon />}>Malumotlarni o’zgartirish</Button>
-                                </Link>
-                                <Link to={"/profile/articles"}>
-                                    <Button icon={<ArticlesIcon />}>Mening maqolalarim</Button>
-                                </Link>
-                                <Link to={"/profile/send-article"}>
-                                    <Button icon={<SendArticleIcon />}>Maqola yuborish</Button>
-                                </Link>
-                            </Flex>
+                            <ProfileTabs />
                             <Outlet />
                         </Flex>
                     </>

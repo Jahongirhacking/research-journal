@@ -1,3 +1,5 @@
+@use "../../variables";
+
 .profile-page {
   .profile-card {
     width: 100%;
@@ -54,7 +56,19 @@
     flex-wrap: wrap;
 
     a {
+      width: 100%;
       flex: 1;
+
+      &.active button {
+        background-color: #4a63ab !important;
+        * {
+          color: #fff;
+        }
+        path,
+        rect {
+          stroke: #fff;
+        }
+      }
     }
 
     button {
@@ -63,9 +77,18 @@
       padding: 20px;
       background-color: #e8effa !important;
       border-radius: 16px;
+      transition: 0.4s ease;
       border: none;
+      gap: 23px;
+
+      svg {
+        width: 100%;
+      }
 
       span {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -95,6 +118,7 @@
       padding: 35px;
       border-radius: 16px;
       min-width: min(300px, 100%);
+      overflow: hidden;
 
       h3 {
         font-weight: 600;
@@ -112,6 +136,64 @@
         letter-spacing: 0%;
         text-align: center;
         color: #181717;
+      }
+    }
+
+    .form-box-container {
+      background-color: #e8effa;
+      padding: 20px;
+      border-radius: 16px;
+
+      .form-box {
+        .base-inputs {
+          label {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            @include variables.responsive_card(600, 1100, 1400, 20);
+
+            .ant-select,
+            .ant-select-selection-wrap {
+              height: 60px;
+            }
+
+            .ant-picker {
+              padding: 0 11px;
+            }
+
+            input {
+              border-radius: 16px;
+              border: none;
+              height: 60px;
+              color: #4a63ab;
+            }
+          }
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          input,
+          textarea {
+            border-radius: 16px;
+            border: none;
+            height: 60px;
+            color: #4a63ab;
+          }
+
+          textarea {
+            padding: 18px;
+            min-height: 180px;
+          }
+
+          .authors-input {
+            input {
+              @include variables.responsive_card(600, 1100, 1400, 20);
+            }
+          }
+        }
       }
     }
   }
