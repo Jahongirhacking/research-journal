@@ -1,4 +1,4 @@
-import { Button, Flex, Form, Image, Input, Segmented, Typography } from 'antd';
+import { Button, Flex, Form, Input, Segmented, Typography } from 'antd';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthIcon } from '../../../assets/icons';
@@ -40,11 +40,8 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
   return (
     <div style={{ width: '100%' }} className="login-page">
       <Typography.Title level={2} className="main-title"><AuthIcon /> Ro‘yxatdan o‘tish</Typography.Title>
-      <Flex vertical className='padding-box'>
+      <Flex vertical className='padding-box' align='center'>
         <Flex className='auth-content'>
-          <Flex className='image-container'>
-            <Image src='/images/register_img.png' preview={false} />
-          </Flex>
           <Flex vertical className='auth-main'>
             <Segmented
               defaultValue={"/auth/register"}
@@ -58,14 +55,13 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
               }}
             />
             <Form form={form} onFinish={onNext}>
-              <Flex vertical gap={63} style={{ width: '100%' }}>
+              <Flex vertical gap={35} style={{ width: '100%' }}>
                 <Flex vertical gap={20}>
                   <Form.Item
                     name={'firstName'}
                     rules={[
                       { required: true, message: 'Ism kiritilishi shart!' },
                     ]}
-                    label="Ismingizni kiriting"
                     layout='vertical'
                   >
                     <Input placeholder='Ism' />
@@ -76,7 +72,6 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
                     rules={[
                       { required: true, message: 'Familiya kiritilishi shart!' },
                     ]}
-                    label="Familiyangizni kiriting"
                     layout='vertical'
                   >
                     <Input placeholder='Familiya' />
@@ -88,14 +83,13 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
                       { required: true, message: 'Telefon raqami kiritilishi shart!' },
                       { pattern: /^\+998\d{9}$/, message: 'Telefon raqami formati noto‘g‘ri!' },
                     ]}
-                    label="Telefon raqamingizni kiriting"
                     layout='vertical'
                   >
                     <InputMask
                       format={['!+', '!9', '!9', '!8', ...('(99) 999 99 99').split('')]}
                       maskChar={[' ', '(', ')']}
                       setValue={setPhone}
-                      placeholder="Telefon raqam"
+                      placeholder='Telefon raqam'
                       className='input-mask phone-input'
                     />
                   </Form.Item>
@@ -106,7 +100,6 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
                       { required: true, message: 'Pasport seriya va raqami kiritilishi shart!' },
                       { pattern: /^[A-Z]{2}\d{7}$/, message: 'Pasport formati noto‘g‘ri!' },
                     ]}
-                    label="Passport seriya raqamingizni kiriting"
                     layout='vertical'
                   >
                     <InputMask
@@ -124,7 +117,6 @@ const GetPhone = ({ handleSubmit }: { handleSubmit: (data: object) => Promise<bo
                       { required: true, message: 'JShShIR kiritilishi shart!' },
                       { pattern: /^\d{14}$/, message: 'JShShIR faqat 14 ta raqamdan iborat bo‘lishi kerak!' },
                     ]}
-                    label="JShShIR kiriting"
                     layout='vertical'
                   >
                     <InputMask

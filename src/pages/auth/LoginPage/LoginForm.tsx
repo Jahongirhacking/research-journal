@@ -1,4 +1,4 @@
-import { Button, Divider, Flex, Form, Image, Input, Segmented, Typography } from 'antd';
+import { Button, Divider, Flex, Form, Input, Segmented, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from "uuid";
@@ -35,13 +35,10 @@ export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Pr
     };
 
     return (
-        <div style={{ width: '100%' }} className="login-page">
+        <div style={{ width: '100%' }} className="login-part">
             <Typography.Title level={2} className="main-title"><AuthIcon /> Tizimga kirish</Typography.Title>
-            <Flex vertical className='padding-box'>
+            <Flex vertical className='padding-box auth-box' align='center'>
                 <Flex className='auth-content'>
-                    <Flex className='image-container'>
-                        <Image src='/images/auth_img.png' preview={false} />
-                    </Flex>
                     <Flex vertical className='auth-main'>
                         <Segmented
                             defaultValue={"/auth/login"}
@@ -56,7 +53,7 @@ export const LoginForm = ({ handleSubmit }: { handleSubmit: (data: object) => Pr
                         />
 
                         <Form form={form} onFinish={handleLogin} autoComplete='off'>
-                            <Flex vertical gap={90} style={{ width: '100%' }}>
+                            <Flex vertical gap={35} style={{ width: '100%' }}>
                                 <Flex vertical gap={20}>
                                     <Form.Item
                                         name={'phoneNumber'}

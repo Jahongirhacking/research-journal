@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import ControlledFlow from '../../../components/ControlledFlow/ControlledFlow';
 import { useRegisterMutation } from "../../../services/users";
 import { IRegister } from '../../../services/users/type';
+import { getErrorMessage } from '../../../utils/errorHandler';
 import { getLocalStorage, localStorageNames, setLocalStorage } from '../../../utils/storageUtils';
 import GetPhone from './GetPhone';
 import GetSMS from './GetSMS';
@@ -43,7 +44,7 @@ export const RegisterPage = () => {
       if (isSuccess) {
         message.success(res.message)
       } else {
-        message.error(res.message)
+        message.error(getErrorMessage(res.message))
       }
       return isSuccess;
     } catch (err) {
@@ -53,7 +54,7 @@ export const RegisterPage = () => {
   };
 
   return (
-    <Flex vertical style={{ width: '100%' }} className="register-page pd-box">
+    <Flex vertical style={{ width: '100%' }} className="register-page pd-box" align='center'>
       <ControlledFlow current={index} setCurrent={setIndex} data={data} setData={setData}>
         <GetPhone handleSubmit={handleGetPhone} />
         <SetPassword handleSubmit={handleSetPassword} />
