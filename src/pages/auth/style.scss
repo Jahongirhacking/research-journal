@@ -2,7 +2,7 @@
 
 body:has(.login-page, .register-page) {
   .login-page,
-  .register-page {
+  .register-page:not(:has(.login-page)) {
     padding-bottom: 80px;
   }
 
